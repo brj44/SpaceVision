@@ -25,7 +25,9 @@
 
 
 ## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+- Navigation bar (navigates different pages)
+- Search bar (based on keywords)
+- Website header( every page will have the same header)
+- Displaying text information ( will display the text info from different APIs to the user after a keyword search)
+- Display pictures from different APIs(will display the pictures from different APIs to the user on the website)
+- About page ( will explain to the user how the website can be navigated and why the website was created)
