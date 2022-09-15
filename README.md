@@ -14,7 +14,7 @@
 * [Features](#features)
 
 ## General Information
-![Space Vision Logo](./img/SpaceVisionLogov1.png)
+![Space Vision Logo](SpaceVisionLogoV1.png)
 
 
 ## Technologies Used
