@@ -18,10 +18,10 @@
 
 
 ## Technologies Used
-[Html](https://html.com/)
-[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[JavaScript](https://www.javascript.com/)
-[React.js](https://reactjs.org/)
+* [Html](https://html.com/)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JavaScript](https://www.javascript.com/)
+* [React.js](https://reactjs.org/)
 
 
 ## Features
