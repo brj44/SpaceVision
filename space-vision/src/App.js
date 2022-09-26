@@ -1,5 +1,5 @@
 import './App.css';
-import logo from './SpaceVisionLogoV1.png';
+import Homepage from "./homepage/homepage";
 import coronalMassEjectionAPICall from "./APIs/coronalMassEjectionAPICall";
 import {useEffect, useState} from "react";
 
@@ -34,9 +34,9 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>Space Vision Homepage</h1>
+                <Homepage />
                 <div>{tableRows}</div>
-                <img src={logo} alt="Logo"/>
+
             </header>
         </div>
     );
