@@ -9,7 +9,10 @@ export default function NasaPhoto(){
 
     useEffect(() => {
 
-        fetchPhoto();
+        fetchPhoto()=.then(r => {
+            console.log(r);
+        });
+
 
         async function fetchPhoto(){
             let APIKey = '8gM8MK39JmyKbq0S9WJyhD2pagekamrppBVDAiNM';
@@ -17,7 +20,7 @@ export default function NasaPhoto(){
             let apodData = await response.json();
             setPhotoData(apodData);
         }
-    }, [])
+    }, []);
 
     return (
         <div>
