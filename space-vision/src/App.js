@@ -15,7 +15,7 @@ function App() {
      */
     const fetchData = async () => {
         setData(await coronalMassEjectionAPICall());
-        //setPhoto(await NasaPhoto());
+        setPhoto(await NasaPhoto());
     }
 
     //useEffect is called everytime the page is updated I believe.
