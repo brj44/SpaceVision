@@ -6,7 +6,8 @@ function Homepage(){
         <>
             <h1>Space Vision Homepage</h1>
             <img src={logo} alt="Logo"/>
-            <img src={picOfDay} alt="NASA APOD"/>
+            <button id = "btnClick"> See APOD </button>
+            <img id="image"/>
             
         </>
     )
