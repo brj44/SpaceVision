@@ -2,9 +2,11 @@ import './App.css';
 import Homepage from "./homepage/homepage";
 import coronalMassEjectionAPICall from "./APIs/coronalMassEjectionAPICall";
 import {useEffect, useState} from "react";
+import NasaPhoto from './APIs/NasaPhoto';
 
 function App() {
     const [data, setData] = useState([]);
+    const [photo, setPhoto]
 
     /*
         This function calls our API call function from the other file.
@@ -13,6 +15,7 @@ function App() {
      */
     const fetchData = async () => {
         setData(await coronalMassEjectionAPICall());
+        setPhoto(await NasaPhoto());
     }
 
     //useEffect is called everytime the page is updated I believe.
@@ -30,13 +33,17 @@ function App() {
         )
     })
 
+    const picOfDay = photo.map((data1) =>{
+        return <img src = {data1.url} />
+    })
+
     //This is the main "meat" of a react file. This is the component that gets rendered.
     return (
         <div className="App">
             <header className="App-header">
                 <Homepage />
                 <div>{tableRows}</div>
-
+                <div>{picOfDay}</div>
             </header>
         </div>
     );
