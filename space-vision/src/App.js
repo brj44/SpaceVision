@@ -15,7 +15,7 @@ function App() {
      */
     const fetchData = async () => {
         setData(await coronalMassEjectionAPICall());
-        setPhoto(await NasaPhoto());
+        //setPhoto(await NasaPhoto());
     }
 
     //useEffect is called everytime the page is updated I believe.
@@ -34,7 +34,8 @@ function App() {
     })
 
     const picOfDay = photo.map((data1) =>{
-        return <img src = {data1.url} alt = "NASA APOD" style={{ width: 500, height: 600 }} />
+        //return <img src = {data1.url} alt = "NASA APOD" style={{ width: 500, height: 600 }} />
+        return <img src = {data1.url} alt = "NASA APOD"/>
     })
 
     //This is the main "meat" of a react file. This is the component that gets rendered.
@@ -43,7 +44,6 @@ function App() {
             <header className="App-header">
                 <Homepage />
                 <div>{tableRows}</div>
-                <div>{picOfDay}</div>
             </header>
         </div>
     );
