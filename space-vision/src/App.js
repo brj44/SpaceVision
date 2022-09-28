@@ -3,6 +3,7 @@ import Homepage from "./homepage/homepage";
 import coronalMassEjectionAPICall from "./APIs/coronalMassEjectionAPICall";
 import {useEffect, useState} from "react";
 
+
 function App() {
     const [data, setData] = useState([]);
 
@@ -30,13 +31,13 @@ function App() {
         )
     })
 
+
     //This is the main "meat" of a react file. This is the component that gets rendered.
     return (
         <div className="App">
             <header className="App-header">
                 <Homepage />
                 <div>{tableRows}</div>
-
             </header>
         </div>
     );
