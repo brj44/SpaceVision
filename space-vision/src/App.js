@@ -2,6 +2,7 @@ import './App.css';
 import Homepage from "./homepage/homepage";
 import coronalMassEjectionAPICall from "./APIs/coronalMassEjectionAPICall";
 import {useEffect, useState} from "react";
+import Header from "./header/Header";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
+                <Header/>
                 <Homepage />
                 <div>{tableRows}</div>
             </header>
