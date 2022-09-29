@@ -3,6 +3,7 @@ import Homepage from "./homepage/homepage";
 import coronalMassEjectionAPICall from "./APIs/coronalMassEjectionAPICall";
 import {useEffect, useState} from "react";
 import Header from "./header/Header";
+import EarthPage from "./Earth/EarthPage";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
                 <Header/>
                 <Homepage />
                 <div>{tableRows}</div>
+                <EarthPage/>
             </header>
         </div>
     );
