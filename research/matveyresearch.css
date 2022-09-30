@@ -1,0 +1,28 @@
+p{
+    color:white;
+    background:green;
+    font-style:oblique;
+}
+
+.box{
+    width:100px;
+    height:100px;
+    background: pink;
+    margin:5px;
+    float: left;
+    position:absolute;
+    top: 600;
+    left:600;
+}
+.notbox{
+    width:300px;
+    height:100px;
+    background: yellow;
+}
+
+#blob{
+    width: 10;
+    height:20;
+    background:orange;
+}
+
