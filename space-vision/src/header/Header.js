@@ -19,15 +19,17 @@ const appBarTheme = createTheme({
     },
 });
 
-const pages = ["Homepage", "About"];
+const pages = ["Homepage", "EarthPage"];
 
-function Header()
+const Header = ({setPage}) =>
 {
     const [anchorElNav, setAnchorElNav] = useState(null);
 
+
+
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
-    };
+    }
 
     return (
         <ThemeProvider theme={appBarTheme}>
@@ -71,7 +73,9 @@ function Header()
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                    <MenuItem key={page}
+                                              onClick={()=> {setPage(page)}}
+                                    >
                                         <Typography textAlign="center">{page}</Typography>
                                     </MenuItem>
                                 ))}
@@ -100,7 +104,7 @@ function Header()
                             {pages.map((page) => (
                                 <Button
                                     key={page}
-                                    onClick={handleCloseNavMenu}
+                                    onClick={()=> {setPage(page)}}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
                                 >
                                     {page}

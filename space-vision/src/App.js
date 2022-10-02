@@ -8,6 +8,7 @@ import EarthPage from "./Earth/EarthPage";
 
 function App() {
     const [data, setData] = useState([]);
+    const [page, setPage] = useState("Homepage");
 
     /*
         This function calls our API call function from the other file.
@@ -33,18 +34,44 @@ function App() {
         )
     })
 
-
     //This is the main "meat" of a react file. This is the component that gets rendered.
-    return (
-        <div className="App">
-            <header className="App-header">
-                <Header/>
-                <Homepage />
-                <div>{tableRows}</div>
-                <EarthPage/>
-            </header>
-        </div>
-    );
+    switch (page){
+        case "Homepage":
+            return(
+                <div className="App">
+                    <header className="App-header">
+                        <Header
+                            setPage = {setPage}
+                        />
+                        <Homepage />
+                    </header>
+                </div>
+            );
+        case "EarthPage":
+            return(
+                <div className="App">
+                    <header className="App-header">
+                        <Header
+                            setPage = {setPage}
+                        />
+                        <EarthPage/>
+                    </header>
+                </div>
+            );
+        default:
+            return (
+                <div className="App">
+                    <header className="App-header">
+                        <Header
+                            setPage = {setPage}
+                        />
+                        <Homepage />
+                        <div>{tableRows}</div>
+                        <EarthPage/>
+                    </header>
+                </div>
+            );
+    }
 }
 
 export default App;
