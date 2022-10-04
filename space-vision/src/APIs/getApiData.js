@@ -19,3 +19,5 @@ console.log(x);    //example of logging photo to console instead, 'console.log(x
 //earth  API call wont work
 //var x = await createJson('earth');
 //console.log(x);
+
+//just demoing the pull request, ignore this
