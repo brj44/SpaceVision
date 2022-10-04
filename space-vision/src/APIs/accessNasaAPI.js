@@ -26,8 +26,8 @@ async function createJson(topic){
         api_call = path + date + begin_date + end_date + count + thumbs
     }
 
-    else if (topic == 'asteroid neo'){
-        path == '/neo/rest/v1/feed?';
+    else if (topic = 'asteroid neo'){
+        path = '/neo/rest/v1/feed?';
         begin_date = ''       //use format: &begin_date=[YYYY-MM-DD]
         end_date = ''         //use format: &end_date=[YYYY-MM-DD]
         api_call = path + begin_date +end_date
@@ -44,8 +44,8 @@ async function createJson(topic){
 
     else if (topic == 'insight'){
         path = '/insight_weather/?';
-        version = ''         //use format: &version=[float]
-        feedtype = ''        //use format: &feedtype=[string]
+        version = ''                       //use format: &version=[float]
+        feedtype = 'feedtype=json&'        //use format: &feedtype=[string]
         api_call = path + version + feedtype
     }
 
@@ -61,11 +61,9 @@ async function createJson(topic){
         console.log("Invalid topic provided")
 
 //for working version swap out stars with api key
-    let APIKey = '***********************************'; //add APIKey to env variables and then replace stars with API_Key
+    let APIKey = '8gM8MK39JmyKbq0S9WJyhD2pagekamrppBVDAiNM'; //add APIKey to env variables to hide it later
     let response = await fetch('https://api.nasa.gov' + api_call + 'api_key=' + APIKey );
     const APIData = await response.json();
     return APIData;
 };
 
-//use the line of code below to test functionality
-//createJson('apod').then((res)=>console.log(res));
