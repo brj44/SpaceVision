@@ -15,7 +15,7 @@
 
 ## General Information
 ![Space Vision Logo](SpaceVisionLogoV1.png)
-his
+
 
 ## Technologies Used
 * [Html](https://html.com/)
