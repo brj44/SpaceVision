@@ -4,6 +4,7 @@ import coronalMassEjectionAPICall from "./APIs/coronalMassEjectionAPICall";
 import {useEffect, useState} from "react";
 import Header from "./header/Header";
 import EarthPage from "./Earth/EarthPage";
+import Apod from "./APOD/apod";
 import "./Components/SearchBar";
 import SearchBar from './Components/SearchBar';
 
@@ -59,6 +60,18 @@ function App() {
                         />
                         <SearchBar/>
                         <EarthPage/>
+                    </header>
+                </div>
+            );
+            case "Apod":
+            return(
+                <div className="App">
+                    <header className="App-header">
+                        <Header
+                            setPage = {setPage}
+                        />
+                        <SearchBar/>
+                        <Apod/>
                     </header>
                 </div>
             );
