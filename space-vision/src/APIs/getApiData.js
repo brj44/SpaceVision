@@ -1,5 +1,5 @@
 
-import { createJson } from './bru.js';
+import { createJson } from './accessNasaAPI.js';
 
 
 var x = (await createJson('apod'));   
