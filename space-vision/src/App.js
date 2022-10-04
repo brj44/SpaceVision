@@ -4,6 +4,8 @@ import coronalMassEjectionAPICall from "./APIs/coronalMassEjectionAPICall";
 import {useEffect, useState} from "react";
 import Header from "./header/Header";
 import EarthPage from "./Earth/EarthPage";
+import "./Components/SearchBar";
+import SearchBar from './Components/SearchBar';
 
 
 function App() {
@@ -43,6 +45,7 @@ function App() {
                         <Header
                             setPage = {setPage}
                         />
+                        <SearchBar/>
                         <Homepage />
                     </header>
                 </div>
@@ -54,6 +57,7 @@ function App() {
                         <Header
                             setPage = {setPage}
                         />
+                        <SearchBar/>
                         <EarthPage/>
                     </header>
                 </div>
