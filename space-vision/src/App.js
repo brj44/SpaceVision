@@ -43,6 +43,7 @@ function App() {
                     <header className="App-header">
                         <Header
                             setPage = {setPage}
+                
                         />
                         <SearchBar/>
                         <Homepage />
@@ -55,6 +56,7 @@ function App() {
                     <header className="App-header">
                         <Header
                             setPage = {setPage}
+                            
                         />
                         <SearchBar/>
                         <EarthPage/>
