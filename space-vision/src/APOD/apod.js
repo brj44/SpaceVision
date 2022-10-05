@@ -18,11 +18,13 @@ function Apod(){
 
     return(
         <>
-            <h1>NASA Astrological Picture Of The Day</h1>
+            <h1>NASA Astronomy Picture Of The Day</h1>
+            <h2> {photo.title} </h2>
             <img src= {photo.url}
-                 alt= "Will change every day"
+                 alt= "NASA APOD"
                  width= "750"
             />
+            <p> {photo.explanation} </p>
         </>
     )
 
