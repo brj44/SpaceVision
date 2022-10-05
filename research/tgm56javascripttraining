@@ -1,0 +1,15 @@
+Title or name of research/training:
+Basic javascript
+
+Why you are doing it:
+Because I have little experience with Javascript and I need to review how to display text in the JSX portion of my APOD page.
+
+What you expect to learn/do.   Be specific by identifying what code/modules will be affected by the research/training:
+I will learn how to utilize different attributes when receiving data from my APIs to display them on the page cprrectly.
+I will also research image/video displays to help me look forward on how to display videos from the APOD api
+
+What do you expect to do with it, including any code you expect to write.  Be specific.  For example, "Writing the UI" is not sufficient.   "Writing the Login class" is.
+I will write code that displays the title of today's apod image and also displays a paragraph description of the image.
+
+What task(s) in Jira represent the work you will do that was/is dependent on the research/training.
+This will fulfill my task to create a UI display for the text information from the APOD api
