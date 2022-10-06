@@ -40,5 +40,34 @@
 - ABOUT: About page ( will explain to the user how the website can be navigated and why the website was created)
 	- As a user, I would like an about page that explains what the website is about.
 
+## Sprint 1
+![SpaceVisionHp](SVHomepageS1)
+![SpaceVisionEp](SVEarthpageS1)
+
+
+## Contributions
+### Benito:
+- [SV-7](https://cs3398f22romulans.atlassian.net/browse/SV-7?atlOrigin=eyJpIjoiZGIxOTU5MmJhZDFhNDExZGI3ZmMzMzlkOTJmMWI3N2UiLCJwIjoiaiJ9) Create app with npm
+	- https://bitbucket.org/cs3398f22romulans/space-vision/commits/f2e5c205d836338e7a23997d232e6659fdd86d84
+	
+- [SV-9](https://cs3398f22romulans.atlassian.net/browse/SV-9?atlOrigin=eyJpIjoiZTUzMTA1MjBjNjA3NDgyZDhmMTM5YTE3ZThhMmFiMGMiLCJwIjoiaiJ9) Create the base app header component
+	- https://bitbucket.org/cs3398f22romulans/space-vision/commits/e1cf7deb28101f4b6ff0fcb84e0d5b5850d905eb
+	
+- [SV-11](https://cs3398f22romulans.atlassian.net/browse/SV-11?atlOrigin=eyJpIjoiY2E0YWVkN2EwOTkxNGI2MjkyZmNlMTE3MWZkNTgxMmEiLCJwIjoiaiJ9) Create Navigation Bar
+	- https://bitbucket.org/cs3398f22romulans/space-vision/commits/4cac0fff3f7596206515655b896074cf3fc32736
+	
+- [SV-19](https://cs3398f22romulans.atlassian.net/browse/SV-19?atlOrigin=eyJpIjoiNzNlMWQ5ZmM4NmNjNDJkMjhkMjQ2NzYxZmMxZjFkODYiLCJwIjoiaiJ9) Create a base API call template
+	- https://bitbucket.org/cs3398f22romulans/space-vision/commits/36151de7725463e7a8dc8dd9bdfcc46d7bfc92a1
+	
+- [SV-20](https://cs3398f22romulans.atlassian.net/browse/SV-20?atlOrigin=eyJpIjoiOGE0YWE0YWUzY2NhNDk0ZWFhNjVlM2ZiZjRmMDU0YTEiLCJwIjoiaiJ9) Create the base homepage
+	- https://bitbucket.org/cs3398f22romulans/space-vision/commits/ee07ada10c757a5a891977cf57139fe13094aa95
+
+- [SV-21](https://cs3398f22romulans.atlassian.net/browse/SV-21?atlOrigin=eyJpIjoiZDJlZmQ3Zjc2ZDg2NGVmYTg5OGEzNjNlMmE2YjgyZjIiLCJwIjoiaiJ9) Create a page for the earth information
+	- https://bitbucket.org/cs3398f22romulans/space-vision/commits/e070aadb0bcdd2f125039a01611cf52bb25c17ab
+	
+
+
+
+
 
 ## Adding a comment for assignment 13 to create a pull request will delete after assignment is graded
