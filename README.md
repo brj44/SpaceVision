@@ -14,7 +14,7 @@
 * [Features](#features)
 
 ## General Information
-![Space Vision Logo](SpaceVisionLogoV1.png)
+![Space Vision Logo](README_Imgs/SpaceVisionLogoV1.png)
 
 
 ## Technologies Used
@@ -41,8 +41,8 @@
 	- As a user, I would like an about page that explains what the website is about.
 
 ## Sprint 1
-![SpaceVisionHp](SVHomepageS1.jpg)
-![SpaceVisionEp](SVEarthpageS1.jpg)
+![SpaceVisionHp](README_Imgs/SVHomepageS1.jpg)
+![SpaceVisionEp](README_Imgs/SVEarthpageS1.jpg)
 
 
 ## Contributions
@@ -64,7 +64,17 @@
 
 - [SV-21](https://cs3398f22romulans.atlassian.net/browse/SV-21?atlOrigin=eyJpIjoiZDJlZmQ3Zjc2ZDg2NGVmYTg5OGEzNjNlMmE2YjgyZjIiLCJwIjoiaiJ9) Create a page for the earth information
 	- https://bitbucket.org/cs3398f22romulans/space-vision/commits/e070aadb0bcdd2f125039a01611cf52bb25c17ab
-	
+
+## Next Steps
+
+### Sprint 2:
+
+#### Benito
+- Will make the earth page dynamic and display text information about the images that are being dynamically rendered.
+
+- Create an about page that will hold information about our project.
+
+- Will look into creating graphs from information provided by the DONKI API and other similar APIs
 
 
 
