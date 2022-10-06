@@ -41,8 +41,8 @@
 	- As a user, I would like an about page that explains what the website is about.
 
 ## Sprint 1
-![SpaceVisionHp](SVHomepageS1)
-![SpaceVisionEp](SVEarthpageS1)
+![SpaceVisionHp](SVHomepageS1.jpg)
+![SpaceVisionEp](SVEarthpageS1.jpg)
 
 
 ## Contributions
