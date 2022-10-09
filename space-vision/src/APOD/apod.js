@@ -17,15 +17,25 @@ function Apod(){
     }, []);
 
     return(
-        <>
-            <h1>NASA Astronomy Picture Of The Day</h1>
-            <h2> {photo.title} </h2>
-            <img src= {photo.url}
-                 alt= "NASA APOD"
-                 width= "750"
-            />
-            <p> {photo.explanation} </p>
-        </>
+            <>
+                <h1>NASA Astronomy Picture Of The Day</h1>
+                <h2> {photo.title} </h2>
+                {photo.media_type === "video" ?
+                    <iframe
+                        title = {photo.title}
+                        width = "60%"
+                        src = {photo.url}
+                    />
+                    :
+                    <img
+                        src = {photo.url}
+                        alt= "NASA APOD"
+                        width = "750"
+                    />
+                }
+
+                <p> {photo.explanation} </p>
+            </>
     )
 
 }
