@@ -76,6 +76,11 @@
 
 - Will look into creating graphs from information provided by the DONKI API and other similar APIs
 
+#### Tara
+- make improvements to the APOD page to make it more visually appealing / interesting
+
+- Take on tasks as we continue to add more data from APIs
+
 
 
 
