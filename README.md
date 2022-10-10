@@ -66,6 +66,11 @@
 
 - [SV-21](https://cs3398f22romulans.atlassian.net/browse/SV-21?atlOrigin=eyJpIjoiZDJlZmQ3Zjc2ZDg2NGVmYTg5OGEzNjNlMmE2YjgyZjIiLCJwIjoiaiJ9) Create a page for the earth information
 	- https://bitbucket.org/cs3398f22romulans/space-vision/commits/e070aadb0bcdd2f125039a01611cf52bb25c17ab
+### Rayyan
+- Homepage design
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/7c10228b113735127e6b39311e3a0af7b4214fad
+- Search Bar added to webpages
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/934cbc90655a5e8ff027f671191d3fd7f3215c93
 
 ## Next Steps
 
