@@ -83,6 +83,10 @@
 
 - Take on tasks as we continue to add more data from APIs
 
+#### Rayyan 
+- Will create full functionality for the search bar
+
+- Create a new page to display information from user search 
 
 
 
