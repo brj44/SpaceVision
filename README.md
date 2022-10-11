@@ -71,6 +71,10 @@
 https://bitbucket.org/cs3398f22romulans/space-vision/commits/7c10228b113735127e6b39311e3a0af7b4214fad
 - Search Bar added to webpages
 https://bitbucket.org/cs3398f22romulans/space-vision/commits/934cbc90655a5e8ff027f671191d3fd7f3215c93
+- Customized search bar UI 
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/7eed1eb8740a23099281b958c185006e128e8f61
+-Ui design for info display 
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/b3c3b0dd8495e9f55644189cd07c119c44dddb96
 
 ## Next Steps
 
