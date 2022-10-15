@@ -1,4 +1,4 @@
-import logo from '../SpaceVisionLogoV1.png';
+import logo from '../images/SpaceVisionLogoV1.png';
 
 function Homepage(){
 

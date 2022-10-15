@@ -8,10 +8,8 @@
     Some of this info might be slightly wrong and this is a super high level view of it so
     please go research javascript promises and different ways of calling APIs in javascript.
  */
-require('dotenv').config();
-
 async function coronalMassEjectionAPICall() {
-    let APIKey = process.env.APIKey;
+    let APIKey = process.env.REACT_APP_API_KEY;
     let response = await fetch('https://api.nasa.gov/DONKI/CMEAnalysis?startDate=2016-09-01&endDate=2016-09-30&mostAccurateOnly=true&speed=500&halfAngle=30&catalog=ALL&api_key='+ APIKey);
     let coronalMassEjectionData = await response.json();
     return coronalMassEjectionData;
