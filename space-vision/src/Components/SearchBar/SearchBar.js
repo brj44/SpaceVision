@@ -1,7 +1,7 @@
 import './SearchBar.css'
 
 const SearchBar = () =>(
-    <form action="/" method="get">
+    <form action="/space-vision/public" method="get">
         <label htmlFor="header-search">
            <span className="Search-Bar">Enter Query</span> 
         </label>

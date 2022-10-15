@@ -1,6 +1,5 @@
-require('dotenv').config();
 async function fetchPhoto(){
-    let APIKey = process.env.APIKey;
+    const APIKey = process.env.REACT_APP_API_KEY;
     let response = await fetch('https://api.nasa.gov/planetary/apod?api_key='+ APIKey);
     let apodData = await response.json();
     return apodData;
