@@ -1,6 +1,6 @@
 //assessNasaAPI.js will use the API key to access NASA API. A getter class will soon be made to access specific information in the APIs.
 
-require('dotenv').config()
+require('dotenv').config();
 console.log(process.env);
 
 //this function will return a json object for the chosen 'topic' from which information can be extracted
@@ -61,7 +61,7 @@ async function createJson(topic){
         console.log("Invalid topic provided")
 
 //for working version swap out stars with api key
-    let APIKey = '8gM8MK39JmyKbq0S9WJyhD2pagekamrppBVDAiNM'; //add APIKey to env variables to hide it later
+    let APIKey = process.env.APIKey;
     let response = await fetch('https://api.nasa.gov' + api_call + 'api_key=' + APIKey );
     const APIData = await response.json();
     return APIData;
