@@ -76,6 +76,25 @@ https://bitbucket.org/cs3398f22romulans/space-vision/commits/7eed1eb8740a2309928
 -Ui design for info display 
 https://bitbucket.org/cs3398f22romulans/space-vision/commits/b3c3b0dd8495e9f55644189cd07c119c44dddb96
 
+# Matvey
+(https://cs3398f22romulans.atlassian.net/browse/SV-33?atlOrigin=eyJpIjoiYmIxMjBiMjc2NTBjNDhmMWFiM2FlNjFhMDM2ZDYzY2EiLCJwIjoiaiJ9)
+Research basic functionality of Javascript
+
+-https://bitbucket.org/cs3398f22romulans/space-vision/commits/9c8eb4fab0ea289a8806709e0321fe0080870654
+-https://bitbucket.org/cs3398f22romulans/space-vision/commits/5c81f3fb1597d888bab1c1b83b23c8aedfc6df75
+-----------------------------------------------------------------------
+(https://cs3398f22romulans.atlassian.net/browse/SV-32?atlOrigin=eyJpIjoiZjIxODRmNDgwOGI5NDRiMTk2Mjg4OTJiMjVlYzBiNGYiLCJwIjoiaiJ9)
+Getter function to pull desired information from API
+
+-https://bitbucket.org/cs3398f22romulans/space-vision/commits/b65c8f3339dcec4029de4b5a2b2fcaf3c3050a0e
+-https://bitbucket.org/cs3398f22romulans/space-vision/commits/c0af36a66ba18e27636559f19b92871128dd1ccc
+-----------------------------------------------------------------------
+(https://cs3398f22romulans.atlassian.net/browse/SV-31?atlOrigin=eyJpIjoiMTlkNTY0YmY3YTBjNDM4Nzg0YWQwZTc5Y2M1Y2Y4YWQiLCJwIjoiaiJ9)
+Create a function which can use the API key to access NASA API 
+
+-https://bitbucket.org/cs3398f22romulans/space-vision/commits/bf24bea363b4604eab1280260dcc2ac1f96fbcda
+-https://bitbucket.org/cs3398f22romulans/space-vision/commits/aac8a2eb361203040a4595cfdd665e1547dec21e
+
 ## Next Steps
 
 ### Sprint 2:
@@ -97,6 +116,10 @@ https://bitbucket.org/cs3398f22romulans/space-vision/commits/b3c3b0dd8495e9f5564
 
 - Create a new page to display information from user search 
 
+# Matvey
+- Create a near earth objects page that displays asteroids that are closest to Earth, their size, name, if they're a threat.
+-Create a Mars page that displays photos taken by Mars rovers.
+-Filter the Mars photos by date, camera angle taken from, location, etc.
 
 
 
