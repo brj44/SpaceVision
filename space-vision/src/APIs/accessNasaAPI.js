@@ -4,9 +4,9 @@
 //topic choices: 'apod','asteroid neo','earth','insight','mars rover photos'
 async function createJson(topic){
 
-    start_date = 'start_date=2022-9-30&'
-    last_date= 'end_date=2022-10-01&'
-    today = 'date=2022-10-01&'
+    let start_date = 'start_date=2022-9-30&'
+    let last_date= 'end_date=2022-10-01&'
+    let today = 'date=2022-10-01&'
 
     var api_call; 
 
@@ -14,44 +14,44 @@ async function createJson(topic){
     //variables marked with '' already have default values specified on NASA's API website
 
     if (topic == 'apod'){
-        path = '/planetary/apod?';
-        date =''              //use format: &date=[YYYY-MM-DD]
-        begin_date = ''       //use format: &begin_date=[YYYY-MM-DD]
-        end_date = ''         //use format: &end_date=[YYYY-MM-DD]
-        count = ''            //use format: &count=[int] 
-        thumbs =''            //use format: &thumbs=[True/False]
+        let path = '/planetary/apod?';
+        let date =''              //use format: date=[YYYY-MM-DD]&
+        let begin_date = ''       //use format: begin_date=[YYYY-MM-DD]&
+        let end_date = ''         //use format: end_date=[YYYY-MM-DD]&
+        let count = ''            //use format: count=[int]&
+        let thumbs =''            //use format: thumbs=[True/False]&
         api_call = path + date + begin_date + end_date + count + thumbs
     }
 
-    else if (topic = 'asteroid neo'){
-        path = '/neo/rest/v1/feed?';
-        begin_date = ''       //use format: &begin_date=[YYYY-MM-DD]
-        end_date = ''         //use format: &end_date=[YYYY-MM-DD]
+    else if (topic == 'asteroid neo'){
+        let path = '/neo/rest/v1/feed?';
+        let begin_date = ''       //use format: begin_date=[YYYY-MM-DD]&
+        let end_date = ''         //use format: end_date=[YYYY-MM-DD]&
         api_call = path + begin_date +end_date
     }
 
     else if (topic == 'earth'){
-        path = '/planetary/earth/imagery?';
-        lat = 'lat=0.0&'     //use format: &lat=[float]
-        lon = 'lon=0.0&'     //use format: &lon=[float]
-        dim = ''             //use format: &dim=[float]
-        date = ''            //use format: &date=[YYYY-MM-DD]
+        let path = '/planetary/earth/imagery?';
+        let lat = 'lat=0.0&'     //use format: lat=[float]&
+        let lon = 'lon=0.0&'     //use format: lon=[float]&
+        let dim = ''             //use format: dim=[float]&
+        let date = ''            //use format: date=[YYYY-MM-DD]&
         api_call = path + lat + dim + date
     }
 
     else if (topic == 'insight'){
-        path = '/insight_weather/?';
-        version = ''                       //use format: &version=[float]
-        feedtype = 'feedtype=json&'        //use format: &feedtype=[string]
+        let path = '/insight_weather/?';
+        let version = ''                       //use format: version=[float]&
+        let feedtype = 'feedtype=json&'        //use format: feedtype=[string]&
         api_call = path + version + feedtype
     }
 
     else if (topic == 'mars rover photos'){
-        path == '/mars-photos/api/v1/rovers/curiosity/photos?';
-        sol= 'sol=1000&'     //use format: &sol=[int]
-        camera= ''           //use format: &camera=[string]
-        page = ''            //use format: &page=[int]
-        api_call=path + sol+ camera + page
+        let path = '/mars-photos/api/v1/rovers/curiosity/photos?';
+        let earth_date= 'earth_date=2022-10-17&'     //use format:'earth_date=[date]&'
+        let camera= ''           //use format: camera=[string]&
+        let page = ''            //use format: page=[int]&
+        api_call=path + earth_date + camera + page
     }
 
     else
@@ -64,3 +64,4 @@ async function createJson(topic){
     return APIData;
 };
 
+export default createJson;
