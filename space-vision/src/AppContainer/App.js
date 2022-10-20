@@ -8,7 +8,7 @@ import Apod from "../APOD/apod";
 import "../Components/SearchBar/SearchBar";
 import SearchBar from '../Components/SearchBar/SearchBar';
 import FireballPage from "../Fireball/FireballPage";
-
+import SearchResults from "../DisplaySearchResults/DisplaySearchResults";
 
 function App() {
     const [data, setData] = useState([]);
@@ -88,6 +88,18 @@ function App() {
                         </header>
                     </div>
                 );
+            case "Search Results":
+                return(
+                <div className="App">
+                    <header className="App-header">
+                        <Header
+                            setPage = {setPage}
+                        />
+                        <SearchBar/>
+                        <SearchResults />
+                    </header>
+                </div>
+            );
         default:
             return (
                 <div className="App">
