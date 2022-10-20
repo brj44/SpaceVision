@@ -7,6 +7,7 @@ import EarthPage from "../Earth/EarthPage";
 import Apod from "../APOD/apod";
 import "../Components/SearchBar/SearchBar";
 import SearchBar from '../Components/SearchBar/SearchBar';
+import FireballPage from "../Fireball/FireballPage";
 
 
 function App() {
@@ -75,6 +76,18 @@ function App() {
                     </header>
                 </div>
             );
+            case "Fireball Data":
+                return(
+                    <div className="App">
+                        <header className="App-header">
+                            <Header
+                                setPage = {setPage}
+                            />
+                            <SearchBar/>
+                            <FireballPage/>
+                        </header>
+                    </div>
+                );
         default:
             return (
                 <div className="App">
