@@ -88,7 +88,7 @@ function App() {
                         </header>
                     </div>
                 );
-            case "Search Results":
+            case "Search Page":
                 return(
                 <div className="App">
                     <header className="App-header">
