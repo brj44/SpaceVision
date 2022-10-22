@@ -1,4 +1,4 @@
-function graphpage(){
+function Graphpage(){
 
 
     return(
@@ -10,4 +10,4 @@ function graphpage(){
 
 }
 
-export default graphpage;
+export default Graphpage;

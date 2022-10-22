@@ -10,6 +10,7 @@ import SearchBar from '../Components/SearchBar/SearchBar';
 import FireballPage from "../Fireball/FireballPage";
 import SearchResults from "../DisplaySearchResults/DisplaySearchResults";
 import Marz from "../Mars/myMarz";
+import Graphpage from "../GraphPage/graphpage"
 
 function App() {
     const [data, setData] = useState([]);
@@ -110,6 +111,18 @@ function App() {
                             />
                             <SearchBar/>
                             <Marz/>
+                        </header>
+                    </div>
+                );
+            case "Graph page":
+                return(
+                    <div className="App">
+                        <header className="App-header">
+                            <Header
+                                setPage = {setPage}
+                            />
+                            <SearchBar/>
+                            <Graphpage/>
                         </header>
                     </div>
                 );
