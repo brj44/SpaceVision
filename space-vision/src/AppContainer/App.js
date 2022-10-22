@@ -7,7 +7,9 @@ import EarthPage from "../Earth/EarthPage";
 import Apod from "../APOD/apod";
 import "../Components/SearchBar/SearchBar";
 import SearchBar from '../Components/SearchBar/SearchBar';
-
+import FireballPage from "../Fireball/FireballPage";
+import SearchResults from "../DisplaySearchResults/DisplaySearchResults";
+import Marz from "../Mars/myMarz";
 
 function App() {
     const [data, setData] = useState([]);
@@ -75,6 +77,42 @@ function App() {
                     </header>
                 </div>
             );
+            case "Fireball Data":
+                return(
+                    <div className="App">
+                        <header className="App-header">
+                            <Header
+                                setPage = {setPage}
+                            />
+                            <SearchBar/>
+                            <FireballPage/>
+                        </header>
+                    </div>
+                );
+            case "Search Page":
+                return(
+                <div className="App">
+                    <header className="App-header">
+                        <Header
+                            setPage = {setPage}
+                        />
+                        <SearchBar/>
+                        <SearchResults />
+                    </header>
+                </div>
+            );
+            case "Mars":
+                return(
+                    <div className="App">
+                        <header className="App-header">
+                            <Header
+                                setPage = {setPage}
+                            />
+                            <SearchBar/>
+                            <Marz/>
+                        </header>
+                    </div>
+                );
         default:
             return (
                 <div className="App">
