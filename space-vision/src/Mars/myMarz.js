@@ -1,16 +1,24 @@
-import getPhoto from "../APIs/MarsData";
+import GetPhoto from "../APIs/MarsData";
 import {useEffect, useState} from "react";
-import { RemoveRedEye } from "@mui/icons-material";
+//import { RemoveRedEye } from "@mui/icons-material";
+
+import ChooseDate from "../Components/ChooseDate/ChooseDate";
 
 
-function Marz(){
+export default function Marz(){
 
+    const [date, setDate1] = useState(null);
+    //const [date, getDate] = useState(null);
 
+    <ChooseDate
+        setDate1={setDate1}
+    />
+ 
     const [data, setData] = useState({photos:[]});
 
     const fetchData = async () => {
-        setData(await getPhoto());
-        console.log(await getPhoto());
+        setData(await GetPhoto(date));
+        //console.log(await GetPhoto(date));
     }
 
     useEffect( () => {
@@ -38,7 +46,4 @@ function Marz(){
             }
         </>
     )
-
 }
-
-export default Marz;

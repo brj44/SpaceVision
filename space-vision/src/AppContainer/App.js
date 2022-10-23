@@ -10,6 +10,8 @@ import SearchBar from '../Components/SearchBar/SearchBar';
 import FireballPage from "../Fireball/FireballPage";
 import SearchResults from "../DisplaySearchResults/DisplaySearchResults";
 import Marz from "../Mars/myMarz";
+import "../Components/ChooseDate/ChooseDate";
+import ChooseDate from '../Components/ChooseDate/ChooseDate';
 
 function App() {
     const [data, setData] = useState([]);
@@ -109,6 +111,7 @@ function App() {
                                 setPage = {setPage}
                             />
                             <SearchBar/>
+                            <ChooseDate/>
                             <Marz/>
                         </header>
                     </div>
