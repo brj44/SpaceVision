@@ -48,7 +48,9 @@ function App() {
                         <Header
                             setPage = {setPage}
                         />
-                        <SearchBar/>
+                         <SearchBar
+                            setPage = {setPage}
+                            />
                         <Homepage />
                     </header>
                 </div>
@@ -60,7 +62,9 @@ function App() {
                         <Header
                             setPage = {setPage}
                         />
-                        <SearchBar/>
+                        <SearchBar
+                            setPage = {setPage}
+                            />
                         <EarthPage/>
                     </header>
                 </div>
@@ -72,7 +76,9 @@ function App() {
                         <Header
                             setPage = {setPage}
                         />
-                        <SearchBar/>
+                         <SearchBar
+                            setPage = {setPage}
+                            />
                         <Apod/>
                     </header>
                 </div>
@@ -84,7 +90,9 @@ function App() {
                             <Header
                                 setPage = {setPage}
                             />
-                            <SearchBar/>
+                             <SearchBar
+                            setPage = {setPage}
+                            />
                             <FireballPage/>
                         </header>
                     </div>
@@ -96,7 +104,9 @@ function App() {
                         <Header
                             setPage = {setPage}
                         />
-                        <SearchBar/>
+                         <SearchBar
+                            setPage = {setPage}
+                            />
                         <SearchResults />
                     </header>
                 </div>
@@ -108,7 +118,9 @@ function App() {
                             <Header
                                 setPage = {setPage}
                             />
-                            <SearchBar/>
+                             <SearchBar
+                            setPage = {setPage}
+                            />
                             <Marz/>
                         </header>
                     </div>

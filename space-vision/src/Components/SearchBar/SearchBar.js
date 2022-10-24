@@ -1,7 +1,13 @@
 import './SearchBar.css'
+import React from 'react'
+const SearchBar = ({setPage}) =>{
 
-const SearchBar = () =>(
-    <form action="/space-vision/public" method="get">
+    const buttonClick = () =>{
+        setPage("Search Page");
+    }
+
+    return(
+        <div>
         <label htmlFor="header-search">
            <span className="Search-Bar">Enter Query</span> 
         </label>
@@ -12,8 +18,11 @@ const SearchBar = () =>(
             placeholder="Search NASA API "
             name="s" 
         />
-        <button className='Search-Button' type="submit">Search</button>
-    </form>
-);
+        <button onClick={() => {buttonClick()}} className='Search-Button' >Search</button>
+        </div>
+    )
+    
+}
+    
 
 export default SearchBar;
