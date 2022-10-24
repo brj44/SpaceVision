@@ -4,12 +4,23 @@ import {InputAdornment, TextField} from "@mui/material";
 import './FireballPage.css';
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import {
+    ScatterChart,
+    Scatter,
+    XAxis,
+    YAxis,
+    ZAxis,
+    CartesianGrid,
+    Tooltip,
+    Legend,
+} from 'recharts';
 
 function FireballPage(){
     const [fireballData, setFireballData] = useState({data:[]});
     const [minDate, setMinDate] = useState("");
     const [maxDate, setMaxDate] = useState("");
-    const [clicked, setClicked] = useState(false);
+
+    const graphData = [];
 
     const handleMinDateChange = (event) => {
         setMinDate(event.target.value);
@@ -18,21 +29,18 @@ function FireballPage(){
         setMaxDate(event.target.value);
     }
     const handleClicked = () => {
-        setClicked(true);
         fetchData(minDate, maxDate).then(r => {
             console.log(r);
         });
     }
 
     const fetchData = async (minDate, maxDate) => {
-        if (clicked) {
-            if (minDate === "" ) {
-                setFireballData(await fireballAPICall());
-            } else if (minDate !== "" && maxDate === "" || minDate !== "" && minDate===maxDate) {
-                setFireballData(await fireballAPICall(minDate));
-            } else {
-                setFireballData(await fireballAPICall(minDate, maxDate));
-            }
+        if (minDate === "") {
+            setFireballData(await fireballAPICall());
+        } else if ((minDate !== "" && maxDate === "") || (minDate !== "" && minDate === maxDate)) {
+            setFireballData(await fireballAPICall(minDate));
+        } else {
+            setFireballData(await fireballAPICall(minDate, maxDate));
         }
     }
 
@@ -40,9 +48,12 @@ function FireballPage(){
         fetchData(minDate, maxDate).then(r => {
             console.log(r);
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    fireballData ? console.log(fireballData.data[0]) : fetchData();
+    fireballData ? fireballData.data.map((fireball) => (
+        graphData.push({V: fireball[8], E: fireball[1], D: fireball[0]})
+    )) : console.log("loading");
 
     return(
         <>
@@ -96,25 +107,28 @@ function FireballPage(){
                             justifyContent: "center",
                         }}
                     >
-                        Submit
+                        Load Data
                     </Button>
             </Box>
 
-            {
-                fireballData.data ? fireballData.data.map((fireball) => {
-                    return (
-                        <div key = {fireball[0]}>
-                            <p>Date and Time: {fireball[0]}</p>
-                            <p>Velocity: {fireball[8]} km/s</p>
-                            <p>Altitude: {fireball[7]}</p>
-                            <p>Latitude: {fireball[3]}</p>
-                            <p>Longitude: {fireball[5]}</p>
-                            <p>Energy: {fireball[1]}</p>
-                        </div>
-                    )
-                }) : <h1>Loading...</h1>
-            }
-
+            <ScatterChart
+                width={400}
+                height={400}
+                margin={{
+                    top: 20,
+                    right: 20,
+                    bottom: 20,
+                    left: 20,
+                }}
+            >
+                <CartesianGrid/>
+                <XAxis type="number" dataKey="E" name="Energy" unit=" kJ"/>
+                <YAxis type="number" dataKey="V" name="Velocity" unit=" km/s"/>
+                <ZAxis type="string" dataKey="D" name="Date and Time" unit=""/>
+                <Tooltip cursor={{strokeDasharray: '3 3'}}/>
+                <Legend/>
+                <Scatter name="Fireballs" data={graphData} fill="#8884d8" shape="star"/>
+            </ScatterChart>
         </>
     )
 
