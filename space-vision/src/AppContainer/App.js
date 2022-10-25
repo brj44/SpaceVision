@@ -133,7 +133,9 @@ function App() {
                             <Header
                                 setPage = {setPage}
                             />
-                            <SearchBar/>
+                             <SearchBar
+                            setPage = {setPage}
+                            />
                             <Graphpage/>
                         </header>
                     </div>
