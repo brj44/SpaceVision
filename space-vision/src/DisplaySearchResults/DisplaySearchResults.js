@@ -1,24 +1,56 @@
 import './DisplaySearchResults.css'
-function SearchResults(){
-let dummy_search_result = [
-{title: "Today in Space",
- DOA: "Two very different payloads flying on one rocket are ready for their ride to space. Creating an integrated stack that stands approximately 27 feet tall, the National Oceanic and Atmospheric Administration’s (NOAA) Joint Polar Satellite System-2 (JPSS-2) and NASA’s Low-Earth Orbit Flight Test of an Inflatable Decelerator (LOFTID) spacecraft are safely secured inside the United Launch Alliance (ULA) Atlas V rocket’s payload fairing at Vandenberg Space Force Base in California."
+import React, { useState, useEffect } from 'react';
+//import video from "./video.mp4"
 
-},
-{
-    title: "Tomorrow in space...",
-    DOA: "9/29/22"
-}]
+const TOP_RESULTS = 5
+let APIKey = process.env.REACT_APP_API_KEY;
+
+function SearchResults(){
+     
+    const [apiResults, setResults] = useState([])
+    useEffect( () => {
+        getData()
+     }, [])
+    console.log(apiResults)
+ 
+const getData = () => {
+    
+    fetch("https://images-api.nasa.gov/search?q=apollo%2011")
+       .then( res => res.json())
+       .then((result) => {setResults(result.collection.items)})
+       .then((result) => {console.log("in get data" ,result)})
+    }
+
 const displayResults=()=>{
     let results = []
-        for(var i = 0; i < dummy_search_result.length; i++){
-            results.push(<header className="header-info">{dummy_search_result[i].title}</header>)
-            results.push(<p className="search-info">{dummy_search_result[i].DOA}</p>)
+    let count = 0;
+    if(apiResults.length != 0){
+        for(var i = 0; i < apiResults.length; i++){
+             //results.push(<header className="header-info">{apiResults[i].title}</header>)
+             if(apiResults[i].data[0].media_type == "image"){
+                    results.push(<header className="header-info">{count + 1}).  {apiResults[i].data[0].title}</header>)
+                    results.push(<img
+                    alt = {apiResults[i].data[0].title}
+                    width = '1200px'
+                    height= '660px'
+                    src = {apiResults[i].links[0].href}
+                />)
+
+                results.push(<p className="search-info">{apiResults[i].data[0].description}</p>)
+                
+            console.log("RESULTS --------- ", results)
+            count++;
+             }
+             if(count == 10){
+                break;
+             }
         }
-        return results
+    }
+    return results
 }
     return(
         <div>
+        <header className= "top10"> TOP 10 RESULTS</header>
             {displayResults()}
         </div>
     )

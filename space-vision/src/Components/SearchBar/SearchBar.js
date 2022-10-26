@@ -16,7 +16,7 @@ const SearchBar = ({setPage}) =>{
             id="header-search"
         
             placeholder="Search NASA API "
-            name="s" 
+            name="UserSearch" 
         />
         <button onClick={() => {buttonClick()}} className='Search-Button' >Search</button>
         </div>
