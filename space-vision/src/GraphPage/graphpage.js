@@ -25,7 +25,7 @@ function Graphpage(){
 
     return(
         <>
-            <h1>Graph Page</h1>
+            <h1>Near Earth Objects</h1>
             {
                 cadData.data ? cadData.data.map((cad) => {
                     return (
@@ -34,11 +34,11 @@ function Graphpage(){
                             <p>Diameter: {cad[11]} km</p>
                         </div>
                     )
-                })
+                 }) : <h1>raw data</h1>
             }
         </>
     )
 
 }
 
-export default GraphPage;
+export default Graphpage;
