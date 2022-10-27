@@ -1,21 +1,39 @@
-import getPhoto from "../APIs/MarsData";
+import GetPhoto from "../APIs/MarsData";
+import './myMarz.css'
 import {useEffect, useState} from "react";
-import { RemoveRedEye } from "@mui/icons-material";
 
+export default function Marz(){
 
-function Marz(){
-
-
+    const [date, setDate] = useState("");  
+    const [click, setClick] = useState(false);
     const [data, setData] = useState({photos:[]});
 
-    const fetchData = async () => {
-        setData(await getPhoto());
-        console.log(await getPhoto());
+    const fetchData = async (date) => {
+        setClick(true)
+        if (click) {
+            if (date === '' ) {
+                setData(await GetPhoto());
+            } else {
+                setData(await GetPhoto(date));
+            }
+        }
     }
 
-    useEffect( () => {
+    const getDate = (e) => {
+        setDate(e.target.value);
+        console.log(e.target.value)
+        console.log(click)
+        }
 
-        fetchData().then(r => {
+    const clicked = () => {
+        fetchData(date).then(r => {
+            console.log(r)
+            console.log(date);
+        });
+    }
+
+    useEffect( () => {        
+        fetchData(date).then(r => {
             console.log(r);
         });
     }, []);
@@ -23,6 +41,14 @@ function Marz(){
     return(
         <>
             <h1>Mars</h1>
+            {
+            <div className="EnterDate">
+                ENTER DATE: 
+            <input className="TextInput" onChange={getDate} placeholder=" YYYY-MM-DD "/>
+            <button className="Button" onClick={clicked}>Search</button>
+            <p>(Minumim 2012-08-06)</p>
+            </div>
+            } 
             {
                 data.photos ? data.photos.map((x) => {
                     return (                       
@@ -38,7 +64,4 @@ function Marz(){
             }
         </>
     )
-
 }
-
-export default Marz;

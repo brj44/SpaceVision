@@ -12,6 +12,7 @@ import SearchResults from "../DisplaySearchResults/DisplaySearchResults";
 import Marz from "../Mars/myMarz";
 import Graphpage from "../GraphPage/graphpage"
 
+
 function App() {
     const [data, setData] = useState([]);
     const [page, setPage] = useState("Homepage");
