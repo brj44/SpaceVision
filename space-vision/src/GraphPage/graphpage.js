@@ -40,13 +40,13 @@ function Graphpage(){
         <>
             <h1>Near Earth Objects Close Approach Data</h1>
             <ScatterChart
-                width={400}
+                width={600}
                 height={400}
                 margin={{
                     top: 20,
-                    right: 20,
+                    right: 45,
                     bottom: 20,
-                    left: 20,
+                    left: 45,
                 }}
             >
                 <CartesianGrid/>
