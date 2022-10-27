@@ -48,12 +48,15 @@
     padding-right: 20px;
     margin-left: 300px;
     margin-right: 300px;
-    
+    animation: color-change 12s infinite;
 }
-.top10:hover{
-    color: red;
-    
-}
+@keyframes color-change {
+    0% { color: cyan; }
+    25%{ color: red }
+    50% { color: lightgreen; }
+    75%{color: whitesmoke}
+    100% { color: purple; }
+  }
 .header-error{
     color:crimson;
     font-size: 70px;
