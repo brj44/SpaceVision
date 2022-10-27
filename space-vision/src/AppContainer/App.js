@@ -15,7 +15,8 @@ import Graphpage from "../GraphPage/graphpage"
 function App() {
     const [data, setData] = useState([]);
     const [page, setPage] = useState("Homepage");
-
+    const [query,setQuery] = useState("")
+    
     /*
         This function calls our API call function from the other file.
         It requires await because the function will only return a promise
@@ -51,6 +52,7 @@ function App() {
                         />
                          <SearchBar
                             setPage = {setPage}
+                            setQuery = {setQuery}
                             />
                         <Homepage />
                     </header>
@@ -65,6 +67,7 @@ function App() {
                         />
                         <SearchBar
                             setPage = {setPage}
+                            setQuery = {setQuery}
                             />
                         <EarthPage/>
                     </header>
@@ -79,6 +82,7 @@ function App() {
                         />
                          <SearchBar
                             setPage = {setPage}
+                            setQuery = {setQuery}
                             />
                         <Apod/>
                     </header>
@@ -93,6 +97,7 @@ function App() {
                             />
                              <SearchBar
                             setPage = {setPage}
+                            setQuery = {setQuery}
                             />
                             <FireballPage/>
                         </header>
@@ -105,10 +110,9 @@ function App() {
                         <Header
                             setPage = {setPage}
                         />
-                         <SearchBar
-                            setPage = {setPage}
-                            />
-                        <SearchResults />
+                        <SearchResults 
+                            searchKey = {query}
+                        />
                     </header>
                 </div>
             );
@@ -121,6 +125,7 @@ function App() {
                             />
                              <SearchBar
                             setPage = {setPage}
+                            setQuery = {setQuery}
                             />
                             <Marz/>
                         </header>
@@ -135,6 +140,7 @@ function App() {
                             />
                              <SearchBar
                             setPage = {setPage}
+                            setQuery = {setQuery}
                             />
                             <Graphpage/>
                         </header>
