@@ -140,6 +140,7 @@ function App() {
                             />
                              <SearchBar
                             setPage = {setPage}
+                            setQuery = {setQuery}
                             />
                             <Graphpage/>
                         </header>
