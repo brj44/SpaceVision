@@ -1,9 +1,19 @@
 import './SearchBar.css'
 import React from 'react'
-const SearchBar = ({setPage}) =>{
+import  { useState, useEffect } from 'react';
+const SearchBar = ({setPage,setQuery}) =>{
+    
+    const [input, setInput] = useState("")
+    
 
     const buttonClick = () =>{
-        setPage("Search Page");
+        setQuery(input)
+        setPage("Search Page")
+    }
+    const getInput =(event)=>{
+        setInput(event.target.value)
+        console.log(input)
+
     }
 
     return(
@@ -12,7 +22,7 @@ const SearchBar = ({setPage}) =>{
            <span className="Search-Bar">Enter Query</span> 
         </label>
         <input className='Search-Input-Box'
-            type="text"
+            type="text" onChange={getInput}
             id="header-search"
         
             placeholder="Search NASA API "

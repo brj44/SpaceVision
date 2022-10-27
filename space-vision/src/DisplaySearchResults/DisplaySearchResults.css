@@ -6,23 +6,27 @@
     color: rgb(243, 247, 247);
 }
 .search-info{
+   text-align: justify;
    resize: none;
    position: relative;
-   font-size:22px;
-   color: rgb(245, 242, 242);
-   padding: 70px;
-   padding-left: 300px;
-   padding-right: 300px;
-   margin-left: 100px;
-   margin-right: 100px;
+   font-size: 22px;
+   color: rgb(6, 124, 65);
+   padding: 20px;
+   padding-left: 100px;
+   padding-right: 100px;
+   margin-left: 50px;
+   margin-right: 50px;
    top: 10px;
    
+}
+.search-info:hover{
+    color: cyan
 }
 .header-info{
    resize: none;
    position: relative;
-   font-size: 35px;
-   color: cyan;
+   font-size: 40px;
+   color: rgb(240, 247, 247);
    padding: 70px;
    padding-left: 20px;
    padding-right: 20px;
@@ -44,8 +48,14 @@
     padding-right: 20px;
     margin-left: 300px;
     margin-right: 300px;
+    
 }
 .top10:hover{
     color: red;
     
+}
+.header-error{
+    color:crimson;
+    font-size: 70px;
+    padding: 300px;
 }

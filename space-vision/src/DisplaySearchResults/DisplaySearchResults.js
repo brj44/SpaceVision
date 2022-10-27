@@ -1,13 +1,15 @@
 import './DisplaySearchResults.css'
 import React, { useState, useEffect } from 'react';
 //import video from "./video.mp4"
+//let APIKey = process.env.REACT_APP_API_KEY;
 
-const TOP_RESULTS = 5
-let APIKey = process.env.REACT_APP_API_KEY;
 
-function SearchResults(){
-     
+
+function SearchResults(props){
+    
     const [apiResults, setResults] = useState([])
+    let userQuery = props.searchKey
+
     useEffect( () => {
         getData()
      }, [])
@@ -15,7 +17,7 @@ function SearchResults(){
  
 const getData = () => {
     
-    fetch("https://images-api.nasa.gov/search?q=apollo%2011")
+    fetch("https://images-api.nasa.gov/search?q=" + userQuery)
        .then( res => res.json())
        .then((result) => {setResults(result.collection.items)})
        .then((result) => {console.log("in get data" ,result)})
@@ -24,15 +26,15 @@ const getData = () => {
 const displayResults=()=>{
     let results = []
     let count = 0;
-    if(apiResults.length != 0){
+    if(apiResults.length !== 0){
         for(var i = 0; i < apiResults.length; i++){
              //results.push(<header className="header-info">{apiResults[i].title}</header>)
-             if(apiResults[i].data[0].media_type == "image"){
+             if(apiResults[i].data[0].media_type === "image"){
                     results.push(<header className="header-info">{count + 1}).  {apiResults[i].data[0].title}</header>)
                     results.push(<img
                     alt = {apiResults[i].data[0].title}
-                    width = '1200px'
-                    height= '660px'
+                    width = '700x'
+                    height= '700px'
                     src = {apiResults[i].links[0].href}
                 />)
 
@@ -41,10 +43,13 @@ const displayResults=()=>{
             console.log("RESULTS --------- ", results)
             count++;
              }
-             if(count == 10){
+             if(count === 10){
                 break;
              }
         }
+    }
+    else {
+        results.push(<header className="header-error">Try to search again. No results Found</header>)
     }
     return results
 }
