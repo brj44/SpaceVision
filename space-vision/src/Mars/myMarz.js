@@ -11,7 +11,7 @@ export default function Marz(){
     const fetchData = async (date) => {
         setClick(true)
         if (click) {
-            if (date == '' ) {
+            if (date === '' ) {
                 setData(await GetPhoto());
             } else {
                 setData(await GetPhoto(date));
