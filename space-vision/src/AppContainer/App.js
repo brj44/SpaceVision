@@ -111,7 +111,6 @@ function App() {
                                 setPage = {setPage}
                             />
                             <SearchBar/>
-                            <ChooseDate/>
                             <Marz/>
                         </header>
                     </div>
