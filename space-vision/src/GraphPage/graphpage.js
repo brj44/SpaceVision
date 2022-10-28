@@ -1,5 +1,6 @@
 import CADAPICall from "../APIs/CADAPICall";
 import {useEffect, useState} from "react";
+import Button from "@mui/material/Button";
 import {
     ScatterChart,
     Scatter,
@@ -14,20 +15,31 @@ import {
 
 function Graphpage(){
     const [cadData, setCadData] = useState({data:[]});
-    const [designation, setDesignation] = useState("");
 
     const graphData = [];
+    const [selected, setSelected] = useState('');
 
-    const fetchData = async (designation) => {
-        if (designation === "") {
+    const handleChange = event => {
+    setSelected(event.target.value);
+    }
+
+     const handleClicked = () => {
+        fetchData(selected).then(r => {
+            console.log(r);
+        });
+    }
+    
+
+    const fetchData = async (selected) => {
+        if (selected === "") {
             setCadData(await CADAPICall());
         }else {
-            setCadData(await CADAPICall(designation));
+            setCadData(await CADAPICall(selected));
         }
     }
 
     useEffect( () => {
-        fetchData(designation).then(r => {
+        fetchData(selected).then(r => {
             console.log(r);
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -40,6 +52,39 @@ function Graphpage(){
     return(
         <>
             <h1>Near Earth Objects Close Approach Data</h1>
+
+            <div>
+            <select value={selected} onChange={handleChange}>
+                <option value="">--Choose and option--</option>
+                <option value="Merc">Mercury</option>
+                <option value="Venus">Venus</option>
+                <option value="Earth">Earth</option>
+                <option value="Mars">Mars</option>
+                <option value="Juptr">Jupiter</option>
+                <option value="Satrn">Saturn</option>
+                <option value="Urnus">Uranus</option>
+                <option value="Neptn">Neptune</option>
+                <option value="Pluto">Pluto</option>
+                <option value="Moon">Moon</option>
+            </select>
+            </div>
+
+    <Button
+                        onClick={handleClicked}
+                        variant="contained"
+                        style={{
+                            position: "relative",
+                            top: "15%",
+                            textTransform: "none",
+                            padding: "14px 0px",
+                            maxWidth: "30%",
+                            maxHeight: "70%",
+                            justifyContent: "center",
+                        }}
+                    >
+                        Load Data
+                    </Button>
+    
             {
                 cadData && cadData.data && Number(cadData.count) === graphData.length ? <ScatterChart
                     width={600}
