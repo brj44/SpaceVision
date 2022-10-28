@@ -6,7 +6,7 @@ async function CADAPICall(designation){
     }
     else
     {
-        response = await fetch('https://ssd-api.jpl.nasa.gov/cad.api?des=' + designation + '&diameter=true&limit=20');
+        response = await fetch('https://ssd-api.jpl.nasa.gov/cad.api?body=' + designation + '&diameter=true&limit=20');
     }
     return await response.json();
 }
