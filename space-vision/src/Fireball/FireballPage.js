@@ -32,6 +32,8 @@ function FireballPage(){
         fetchData(minDate, maxDate).then(r => {
             console.log(r);
         });
+        setMinDate("");
+        setMaxDate("");
     }
 
     const fetchData = async (minDate, maxDate) => {
@@ -51,7 +53,7 @@ function FireballPage(){
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    fireballData ? fireballData.data.map((fireball) => (
+    fireballData && fireballData.data ? fireballData.data.map((fireball) => (
         graphData.push({V: fireball[8], E: fireball[1], D: fireball[0]})
     )) : console.log("loading");
 
@@ -111,16 +113,18 @@ function FireballPage(){
                     </Button>
             </Box>
 
-            <ScatterChart
-                width={400}
+            {
+                fireballData.count > 0  ?
+                <ScatterChart
+                width={600}
                 height={400}
                 margin={{
-                    top: 20,
-                    right: 20,
-                    bottom: 20,
-                    left: 20,
-                }}
-            >
+                top: 20,
+                right: 45,
+                bottom: 20,
+                left: 45,
+            }}
+                >
                 <CartesianGrid/>
                 <XAxis type="number" dataKey="E" name="Energy" unit=" kJ"/>
                 <YAxis type="number" dataKey="V" name="Velocity" unit=" km/s"/>
@@ -128,7 +132,9 @@ function FireballPage(){
                 <Tooltip cursor={{strokeDasharray: '3 3'}}/>
                 <Legend/>
                 <Scatter name="Fireballs" data={graphData} fill="#8884d8" shape="star"/>
-            </ScatterChart>
+                </ScatterChart> : <><h1>No Data</h1></>
+            }
+
         </>
     )
 
