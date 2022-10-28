@@ -1,10 +1,10 @@
 
-async function GetPhoto(val){
+async function GetPhoto(date,rover){
   
-    let path = '/mars-photos/api/v1/rovers/curiosity/photos?';
+    let path = '/mars-photos/api/v1/rovers/'+rover+'/photos?';
     let earth_date = '';
-    if (val!=null){
-         earth_date='earth_date='+val.toString()+'&';
+    if (date!=null){
+         earth_date='earth_date='+date.toString()+'&';
     }
     else
         earth_date = 'earth_date=2022-01-01&'
