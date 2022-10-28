@@ -124,3 +124,25 @@ Create a function which can use the API key to access NASA API
 
 
 ## Adding a comment for assignment 13 to create a pull request will delete after assignment is graded
+
+## Contributions
+### Benito:
+### Matvey:
+### Rayyan:
+### Tara:
+
+[SV-39](https://cs3398f22romulans.atlassian.net/browse/SV-39) -Created the page and link in header for the graph page that will show Close Appraoch Data (CAD)
+
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/9dee8441d9d2ce13cb41015868463f2a87f49f92
+
+[SV-43](https://cs3398f22romulans.atlassian.net/browse/SV-43)-Created the call to the Close Approach Data (CAD) API
+
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/0f04f264efcc78cbd2e3fd0353e751a2f1a18754
+
+[SV-45](https://cs3398f22romulans.atlassian.net/browse/SV-45)-Improved the appearance of the graph on the graph page
+
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/06acc30cc9c9dd81573aa1ed67d0fef69fc3fd30
+
+[SV-46](https://cs3398f22romulans.atlassian.net/browse/SV-46)-Added functionality to view different graphs for CAD about different planets
+
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/14a874761aa72a70b41c9c535a798d650e0f3e5b
