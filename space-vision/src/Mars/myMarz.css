@@ -1,0 +1,50 @@
+.EnterDate{
+    position: relative;
+    outline: black;
+    font-size: 20px;
+    color: #eacbdd;
+}
+
+.Button {
+    background-color: #eacbdd;
+    border-radius: 2px;
+    color: rgb(7, 0, 7);
+    font-size: 20px;
+    font-weight: 400;
+    outline: none;
+    padding:1px ;
+    position: relative;
+    text-align: center;
+
+}
+
+.TextInput{
+    padding: 0;
+    position: relative;
+    outline: black;
+    font-size: 20px;
+    margin-left: 10px;
+    width : 140px;
+}
+
+.block{
+    display: block;
+    text-align: left;
+}
+
+.Range{
+    float:right;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 20px;
+    color:rgb(231, 128, 228);
+}
+.SelectRover{
+    
+    margin-top: 30px;
+    text-align: left;
+    
+}
+
+
+

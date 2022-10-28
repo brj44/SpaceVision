@@ -23,9 +23,22 @@ const getData = () => {
        .then((result) => {console.log("in get data" ,result)})
     }
 
+    async function sortResults(){
+        apiResults.sort(function(a,b){
+            //return adata[0].date_created - bdata[0].date_created;
+            if(a.data[0].date_created == b.data[0].date_created)
+                return 0;
+            if(a.data[0].date_created < b.data[0].date_created)
+                return 1;
+            if(a.data[0].date_created > b.data[0].date_created)
+                return -1;
+        });
+    }
+
 const displayResults=()=>{
     let results = []
     let count = 0;
+    sortResults();
     if(apiResults.length !== 0){
         for(var i = 0; i < apiResults.length; i++){
              //results.push(<header className="header-info">{apiResults[i].title}</header>)
@@ -39,6 +52,7 @@ const displayResults=()=>{
                 />)
 
                 results.push(<p className="search-info">{apiResults[i].data[0].description}</p>)
+                results.push(<p className="search-date">{apiResults[i].data[0].date_created}</p>)
                 
             console.log("RESULTS --------- ", results)
             count++;
@@ -62,3 +76,4 @@ const displayResults=()=>{
 }
 
 export default SearchResults;
+
