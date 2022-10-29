@@ -47,7 +47,7 @@ function App() {
         case "Homepage":
             return(
                 <div className="App">
-                    <header className="App-header">
+                    <header className="Home">
                         <Header
                             setPage = {setPage}
                         />

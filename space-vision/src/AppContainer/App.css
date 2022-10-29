@@ -1,16 +1,14 @@
 .App {
   text-align: center;
-  background-color: #282c34;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   min-height: 770px;
-
+  background-image: url("../images/sky.png");
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 0;
   max-height: 10%;
   display: flex;
@@ -19,10 +17,22 @@
   justify-content: top;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url("../images/sky.png");
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.Home{
+  min-height: 0;
+  max-height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-image: url("../images/darker.png");
+}
 
