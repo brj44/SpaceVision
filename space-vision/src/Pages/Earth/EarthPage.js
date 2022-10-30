@@ -1,4 +1,4 @@
-import EPICAPICall from "../APIs/EPICAPICall";
+import EPICAPICall from "../../APIs/EPICAPICall";
 import {useEffect, useState} from "react";
 
 function EarthPage(){

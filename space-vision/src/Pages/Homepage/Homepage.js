@@ -1,4 +1,4 @@
-import fadedLogo from '../images/FadedLogo.png';
+import fadedLogo from '../../images/FadedLogo.png';
 
 function Homepage(){
 

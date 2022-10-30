@@ -1,4 +1,4 @@
-import GetPhoto from "../APIs/MarsData";
+import GetPhoto from "../../APIs/MarsData";
 import './myMarz.css'
 import {useEffect, useState} from "react";
 
@@ -45,6 +45,7 @@ export default function Marz(){
         fetchData(date,rover).then(r => {
             console.log(r);
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return(
@@ -69,7 +70,7 @@ export default function Marz(){
             }
 
             {
-                firstCall&&data.photos.length==0?<p>No images found</p>:
+                firstCall&&data.photos.length===0?<p>No images found</p>:
 
                 data.photos? data.photos.map((x) => {
                     return (                     
@@ -77,6 +78,7 @@ export default function Marz(){
                             <p>id: {x.id}, earth date: {x.earth_date}, rover: {x.rover.name}, camera: {x.camera.full_name}</p>
                             <img
                             src = {x.img_src}
+                            alt = {x.id}
                             />
                             <p>---------------------------------------------------------</p>
                         </div>
