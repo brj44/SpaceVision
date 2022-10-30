@@ -1,4 +1,4 @@
-import fireballAPICall from "../APIs/fireballAPICall";
+import fireballAPICall from "../../APIs/fireballAPICall";
 import {useEffect, useState} from "react";
 import {InputAdornment, TextField} from "@mui/material";
 import './FireballPage.css';
@@ -39,7 +39,7 @@ function FireballPage(){
     const fetchData = async (minDate, maxDate) => {
         if (minDate === "") {
             setFireballData(await fireballAPICall());
-        } else if ((minDate !== "" && maxDate === "") || (minDate !== "" && minDate === maxDate)) {
+        } else if (minDate !== "" && maxDate === "") {
             setFireballData(await fireballAPICall(minDate));
         } else {
             setFireballData(await fireballAPICall(minDate, maxDate));

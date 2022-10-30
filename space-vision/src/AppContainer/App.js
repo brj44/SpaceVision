@@ -1,16 +1,16 @@
 import './App.css';
-import Homepage from "../Homepage/Homepage";
+import Homepage from "../Pages/Homepage/Homepage";
 import coronalMassEjectionAPICall from "../APIs/coronalMassEjectionAPICall";
 import {useEffect, useState} from "react";
 import Header from "../Components/Header/Header";
-import EarthPage from "../Earth/EarthPage";
-import Apod from "../APOD/apod";
+import EarthPage from "../Pages/Earth/EarthPage";
+import Apod from "../Pages/APOD/apod";
 import "../Components/SearchBar/SearchBar";
 import SearchBar from '../Components/SearchBar/SearchBar';
-import FireballPage from "../Fireball/FireballPage";
-import SearchResults from "../DisplaySearchResults/DisplaySearchResults";
-import Marz from "../Mars/myMarz";
-import Graphpage from "../GraphPage/graphpage"
+import FireballPage from "../Pages/Fireball/FireballPage";
+import SearchResults from "../Pages/DisplaySearchResults/DisplaySearchResults";
+import Marz from "../Pages/Mars/myMarz";
+import Graphpage from "../Pages/GraphPage/graphpage"
 
 
 function App() {

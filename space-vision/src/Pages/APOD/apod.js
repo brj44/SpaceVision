@@ -1,4 +1,4 @@
-import NasaPhoto from "../APIs/NasaPhoto";
+import NasaPhoto from "../../APIs/NasaPhoto";
 import {useEffect, useState} from "react";
 
 function Apod(){

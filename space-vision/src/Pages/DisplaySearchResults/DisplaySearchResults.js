@@ -12,6 +12,7 @@ function SearchResults(props){
 
     useEffect( () => {
         getData()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
      }, [])
     console.log(apiResults)
  
@@ -26,12 +27,13 @@ const getData = () => {
     async function sortResults(){
         apiResults.sort(function(a,b){
             //return adata[0].date_created - bdata[0].date_created;
-            if(a.data[0].date_created == b.data[0].date_created)
+            if(a.data[0].date_created === b.data[0].date_created)
                 return 0;
             if(a.data[0].date_created < b.data[0].date_created)
                 return 1;
             if(a.data[0].date_created > b.data[0].date_created)
                 return -1;
+            else return -1;
         });
     }
 
