@@ -76,7 +76,7 @@ https://bitbucket.org/cs3398f22romulans/space-vision/commits/7eed1eb8740a2309928
 -Ui design for info display 
 https://bitbucket.org/cs3398f22romulans/space-vision/commits/b3c3b0dd8495e9f55644189cd07c119c44dddb96
 
-# Matvey
+### Matvey
 (https://cs3398f22romulans.atlassian.net/browse/SV-33?atlOrigin=eyJpIjoiYmIxMjBiMjc2NTBjNDhmMWFiM2FlNjFhMDM2ZDYzY2EiLCJwIjoiaiJ9)
 Research basic functionality of Javascript
 
@@ -97,36 +97,52 @@ Create a function which can use the API key to access NASA API
 
 ## Next Steps
 
-### Sprint 2:
-
-#### Benito
+### Benito
 - Will make the earth page dynamic and display text information about the images that are being dynamically rendered.
 
 - Create an about page that will hold information about our project.
 
 - Will look into creating graphs from information provided by the DONKI API and other similar APIs
 
-#### Tara
+### Tara
 - make improvements to the APOD page to make it more visually appealing / interesting
 
 - Take on tasks as we continue to add more data from APIs
 
-#### Rayyan 
+### Rayyan 
 - Will create full functionality for the search bar
 
 - Create a new page to display information from user search 
 
-# Matvey
+### Matvey
 - Create a near earth objects page that displays asteroids that are closest to Earth, their size, name, if they're a threat.
--Create a Mars page that displays photos taken by Mars rovers.
--Filter the Mars photos by date, camera angle taken from, location, etc.
+- Create a Mars page that displays photos taken by Mars rovers.
+- Filter the Mars photos by date, camera angle taken from, location, etc.
 
 
-
-## Adding a comment for assignment 13 to create a pull request will delete after assignment is graded
+## Sprint 2
 
 ## Contributions
 ### Benito:
+- [SV-56](https://cs3398f22romulans.atlassian.net/browse/SV-56?atlOrigin=eyJpIjoiNDVlMTNiNjkzMTI2NDU4MmI1ZDJlZmNjZWZkNTNmNTkiLCJwIjoiaiJ9) Make the Earth page dynamically display pictures
+	- https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/19fc2bf74198bcd5719c5d2324a753c7313c3f22
+- [SV-58](https://cs3398f22romulans.atlassian.net/browse/SV-58?atlOrigin=eyJpIjoiOTM5NDUwYTI2ZjA1NGFjMDliNmFmNWYzNWE4YmM1MjciLCJwIjoiaiJ9) Create a function to call the Fireball Data API
+    - https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/f14e84f4edfb857a6b0eacabde6adfa24f6747b4
+- [SV-59](https://cs3398f22romulans.atlassian.net/browse/SV-59?atlOrigin=eyJpIjoiZTM0Nzk0NjQ0ZTU4NGIxOGExNjVmMTBiZDU2NWVlOTYiLCJwIjoiaiJ9) Create a Page to display data from the Fireball API call function
+	- https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/530984cfc65abcc2928b251a6c2b4cc97b586a1d
+- [SV-60](https://cs3398f22romulans.atlassian.net/browse/SV-60?atlOrigin=eyJpIjoiNTc5ZmUzMmY5ODJlNGFlN2FjMGJjZmEyMDg2MDAzM2EiLCJwIjoiaiJ9) Create a graph from the Fireball API call function
+	- https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/8c972c6b906aeb7cbfd403683e799fef840cfbc6
+- [SV-50](https://cs3398f22romulans.atlassian.net/browse/SV-50?atlOrigin=eyJpIjoiNDE1Y2E4ZmNkOTE2NDQxYmE0Nzk4MmRiNmM3NDdiOWEiLCJwIjoiaiJ9) Add a user input section to allow the user to control the dates for the data
+	- https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/881c1ea40579c0fd8a1bf87949edf590588f3d3f
+- [SV-54](https://cs3398f22romulans.atlassian.net/browse/SV-54?atlOrigin=eyJpIjoiNjNmYTQyMjFjYWZhNDFjZmIyZWU1ZWVkNTkzYTI2YjQiLCJwIjoiaiJ9) Create a graph using the data from the CAD API call function
+	- https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/a327ddc30ef554038927e9e35edd366230bdc09d
+- [SV-62](https://cs3398f22romulans.atlassian.net/browse/SV-62?atlOrigin=eyJpIjoiODQyNTcxMDE3MjdhNDU1ODlmZDAxYTM2Nzg4NWRlN2UiLCJwIjoiaiJ9) Hotfix to fix TypeError: Cannot read properties of undefined (reading '0') error on refresh of the fireball page.
+	- https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/d4616f0f24bdef18fe4b76f0953dd236eb46eb3a
+- [SV-68](https://cs3398f22romulans.atlassian.net/browse/SV-68?atlOrigin=eyJpIjoiNDg3NDFmMTg3M2NlNGU0OTg0OTA1ODc1MTY5YmM5ZjUiLCJwIjoiaiJ9) Hotfix to map undefined on graph pages
+	- https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/316701986d9a5e12007cbd370a07218e95d0b607
+- [SV-69](https://cs3398f22romulans.atlassian.net/browse/SV-69?atlOrigin=eyJpIjoiN2FhZTRkOTkxNzM3NGI1MThjMTQzNjE0OGVkYzY4MmMiLCJwIjoiaiJ9) Reformat and condense the file structure
+	- https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/b7d09f276fe84de78960a391a0cebb992b23aa0e
+	
 ### Matvey:
 ### Rayyan:
 ### Tara:
@@ -146,3 +162,12 @@ https://bitbucket.org/cs3398f22romulans/space-vision/commits/06acc30cc9c9dd81573
 [SV-46](https://cs3398f22romulans.atlassian.net/browse/SV-46)-Added functionality to view different graphs for CAD about different planets
 
 https://bitbucket.org/cs3398f22romulans/space-vision/commits/14a874761aa72a70b41c9c535a798d650e0f3e5b
+
+## Next Steps
+
+### Benito
+- Add more explanatory information to the graph pages to give users a better understanding of the pages.
+
+- Add more user control to the data being passed into the graphs as well as possibly choosing which graphs are displayed
+
+- Adding a page displaying information from NASA's Exoplanet API
