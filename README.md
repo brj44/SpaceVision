@@ -122,6 +122,18 @@ Create a function which can use the API key to access NASA API
 
 ## Sprint 2
 
+![SpaceVisionHpS2](README_Imgs/SVHomepageS2.jpg)
+![SpaceVisionEpP1S2](README_Imgs/SVEarthpageP1S2.jpg)
+![SpaceVisionEpP2S2](README_Imgs/SVEarthpageP2S2.jpg)
+![SpaceVisionAPODP1S2](README_Imgs/SVAPODP1S2.jpg)
+![SpaceVisionAPODP2S2](README_Imgs/SVAPODP2S2.jpg)
+![SpaceVisionMarsP1S2](README_Imgs/SVMarsP1S2.jpg)
+![SpaceVisionMarsP2S2](README_Imgs/SVMarsP2S2.jpg)
+![SpaceVisionFireballS2](README_Imgs/SVFireballS2.jpg)
+![SpaceVisionGraphPageS2](README_Imgs/SVGraphPageS2.jpg)
+![SpaceVisionSearchP1S2](README_Imgs/SVSearchP1S2.jpg)
+![SpaceVisionSearchP2S2](README_Imgs/SVSearchP2S2.jpg)
+
 ## Contributions
 ### Benito:
 - [SV-56](https://cs3398f22romulans.atlassian.net/browse/SV-56?atlOrigin=eyJpIjoiNDVlMTNiNjkzMTI2NDU4MmI1ZDJlZmNjZWZkNTNmNTkiLCJwIjoiaiJ9) Make the Earth page dynamically display pictures
