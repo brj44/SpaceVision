@@ -155,7 +155,27 @@ Create a function which can use the API key to access NASA API
 - [SV-69](https://cs3398f22romulans.atlassian.net/browse/SV-69?atlOrigin=eyJpIjoiN2FhZTRkOTkxNzM3NGI1MThjMTQzNjE0OGVkYzY4MmMiLCJwIjoiaiJ9) Reformat and condense the file structure
 	- https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/b7d09f276fe84de78960a391a0cebb992b23aa0e
 	
+	
 ### Matvey:
+[SV-48]Add a 'mars rover photos' page that will have pictures of mars taken by different rovers and cameras on different dates.
+https://cs3398f22romulans.atlassian.net/browse/SV-48?atlOrigin=eyJpIjoiZmJhZDFiYTNhMWRhNGUzOGIyY2E3MzIzNTVlYTM4ZGEiLCJwIjoiaiJ9
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/ff0c9d50d7684f1f4b1cf12935e4f9536ec9e2c3
+
+[SV-49]create a filter for the mars photos that filters out specific photos based on filter parameter such as date
+https://cs3398f22romulans.atlassian.net/browse/SV-49?atlOrigin=eyJpIjoiMGFmODRmNWQ1NmY5NDM5Yjg0MGU4NmNlNTc1OTAwYmUiLCJwIjoiaiJ9
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/e8ea31856937c5bf23a595e964c708a0ce209cae
+
+[SV-57]sort the photos based on which rover took them
+https://cs3398f22romulans.atlassian.net/browse/SV-57?atlOrigin=eyJpIjoiMjRhZWI3ZTA1NmNkNDMyMGI3YWFiZDcyOGMwODkxNjUiLCJwIjoiaiJ9
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/d3eb531943f1fe32afe8c4bce62a0a36ff16acef
+
+[SV-41]Sort and display search data by most recent
+https://cs3398f22romulans.atlassian.net/browse/SV-41?atlOrigin=eyJpIjoiZmFlZjYyZjA1NDM3NDIyYTlkYTgwNGY1ZjJiZDEwYjMiLCJwIjoiaiJ9
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/9f661c61829d61bf2fab35833ff156eb1cde9295
+
+[SV-34]Use figma to design/redesign UI into an improved version
+https://cs3398f22romulans.atlassian.net/browse/SV-34?atlOrigin=eyJpIjoiNGQyYzZkMWJiNzFmNGU4MjgxYTQ1ZWJjMjE2ZDNlMWYiLCJwIjoiaiJ9
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/0b603d69bbc3e5731f1199593dccfaa12a801b05
 ### Rayyan:
 ### Tara:
 
