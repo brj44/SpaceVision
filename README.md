@@ -183,3 +183,10 @@ https://bitbucket.org/cs3398f22romulans/space-vision/commits/14a874761aa72a70b41
 - Add more user control to the data being passed into the graphs as well as possibly choosing which graphs are displayed
 
 - Adding a page displaying information from NASA's Exoplanet API
+
+### Tara
+- Fix aspect ratios with images appearing in search results
+
+- add ability to see previous APODs on the APOD page
+
+- add API call to NASA's Earth API and add more function to the Earth page
