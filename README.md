@@ -210,3 +210,10 @@ https://bitbucket.org/cs3398f22romulans/space-vision/commits/14a874761aa72a70b41
 - add ability to see previous APODs on the APOD page
 
 - add API call to NASA's Earth API and add more function to the Earth page
+
+### Matvey
+- Fix bug where some mars photos are too small
+
+- Fix format of mars photo's information
+
+- Utilize APIs to display data from another one of NASA's databases
