@@ -177,6 +177,14 @@ https://bitbucket.org/cs3398f22romulans/space-vision/commits/9f661c61829d61bf2fa
 https://cs3398f22romulans.atlassian.net/browse/SV-34?atlOrigin=eyJpIjoiNGQyYzZkMWJiNzFmNGU4MjgxYTQ1ZWJjMjE2ZDNlMWYiLCJwIjoiaiJ9
 https://bitbucket.org/cs3398f22romulans/space-vision/commits/0b603d69bbc3e5731f1199593dccfaa12a801b05
 ### Rayyan:
+[SV-65] (https://cs3398f22romulans.atlassian.net/browse/SV-65) Setting up api call to take user input from textbox and displaying desired results and also had to reformat how info was displayed on page
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/d05f6e640c3712e5ed92518bff05d02581bae56d
+[SV-67] (https://cs3398f22romulans.atlassian.net/browse/SV-67).  Adding animation to text on display page
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/d6f67e2a7545c71838fcdfdb2571b536d316fa9e
+[SV-63] (https://cs3398f22romulans.atlassian.net/browse/SV-63).  hotfix to Resolve merge conflict
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/62453c4ae805932077952523382c9267a6417960
+[SV-38] (https://cs3398f22romulans.atlassian.net/browse/SV-38) Hitting search btn takes user to display search results page
+https://bitbucket.org/cs3398f22romulans/space-vision/commits/e34b05d06db81de9a07c02c9d58acf0bce4770b7
 ### Tara:
 
 [SV-39](https://cs3398f22romulans.atlassian.net/browse/SV-39) -Created the page and link in header for the graph page that will show Close Appraoch Data (CAD)
@@ -203,6 +211,17 @@ https://bitbucket.org/cs3398f22romulans/space-vision/commits/14a874761aa72a70b41
 - Add more user control to the data being passed into the graphs as well as possibly choosing which graphs are displayed
 
 - Adding a page displaying information from NASA's Exoplanet API
+### Rayyan 
+- Create a page that can save previous search results
+
+- Redesign UI to be more userfriendly 
+
+- Figure out how to put the search bar inside the header 
+
+- Make use of another API from NASA API database on new page 
+
+- create about page 
+
 
 ### Tara
 - Fix aspect ratios with images appearing in search results
