@@ -13,6 +13,13 @@ export default function Marz(){
     const fetchData = async (date,rover) => {
         setClick(true)
         if (click) {
+            // eslint-disable-next-line
+            if (!date.match(/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/) && date !== "")
+            {
+                document.getElementById("TextInput").value = "Invalid Date Format";
+                setDate("Invalid Date Format");
+                return;
+            }
             if (date === ''){                                  
                 setData(await GetPhoto(null,rover));
             } else {
@@ -24,14 +31,10 @@ export default function Marz(){
 
     const getDate = (e) => {
         setDate(e.target.value);
-        console.log(e.target.value)
-        console.log(click)
         }
 
     const getRover = (e) => {
         setRover(e.target.value);
-        console.log(e.target.value)
-        console.log(click)
         }
 
     const clicked = () => {
@@ -53,7 +56,7 @@ export default function Marz(){
             <h1>Mars</h1>
             {
             <div className="EnterDate">ENTER DATE: 
-                <input className="TextInput" onChange={getDate} placeholder=" YYYY-MM-DD "/>
+                <input className="TextInput" id="TextInput" onChange={getDate} placeholder=" YYYY-MM-DD "/>
                 <button className="Button" onClick={clicked}>Search</button>
             </div>
             } 
