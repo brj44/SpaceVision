@@ -15,6 +15,7 @@ import {
     Legend,
 } from 'recharts';
 
+
 function FireballPage(){
     const [fireballData, setFireballData] = useState({data:[]});
     const [minDate, setMinDate] = useState("");
@@ -78,6 +79,11 @@ function FireballPage(){
                     label="Min Date"
                     id="min-date"
                     className={"input"}
+                    // eslint-disable-next-line
+                    error={!minDate.match(/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/) && minDate !== ""}
+                    // eslint-disable-next-line
+                    helperText={!minDate.match(/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/) && minDate !== ""
+                    ? "Invalid Date Format" : ""}
                     sx={{ m: 1, width: '25ch' }}
                     variant={"filled"}
                     onChange={handleMinDateChange}
@@ -89,6 +95,11 @@ function FireballPage(){
                     label="Max Date"
                     id="max-date"
                     className={"input"}
+                    // eslint-disable-next-line
+                    error={!maxDate.match(/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/) && maxDate !== ""}
+                    // eslint-disable-next-line
+                    helperText={!maxDate.match(/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/) && maxDate !== ""
+                        ? "Invalid Date Format" : ""}
                     sx={{ m: 1, width: '25ch' }}
                     variant={"filled"}
                     onChange={handleMaxDateChange}
@@ -108,6 +119,13 @@ function FireballPage(){
                             maxHeight: "70%",
                             justifyContent: "center",
                         }}
+                        // eslint-disable-next-line
+                        disabled={(!maxDate.match(/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/)
+                            && maxDate !== "") ||
+                            // eslint-disable-next-line
+                            (!minDate.match(/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/) &&
+                             minDate !== "")}
+
                     >
                         Load Data
                     </Button>
