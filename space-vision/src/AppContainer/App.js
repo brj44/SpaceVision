@@ -11,6 +11,7 @@ import FireballPage from "../Pages/Fireball/FireballPage";
 import SearchResults from "../Pages/DisplaySearchResults/DisplaySearchResults";
 import Marz from "../Pages/Mars/myMarz";
 import Graphpage from "../Pages/GraphPage/graphpage"
+import EONET from "../Pages/EONET/EONET"
 
 
 function App() {
@@ -132,6 +133,21 @@ function App() {
                         </header>
                     </div>
                 );
+                case "Natural Events":
+                    return(
+                        <div className="App">
+                            <header className="App-header">
+                                <Header
+                                    setPage = {setPage}
+                                />
+                                 <SearchBar
+                                    setPage = {setPage}
+                                    setQuery = {setQuery}
+                                    />
+                                <EONET/>
+                            </header>
+                        </div>
+                    );
             case "Graph page":
                 return(
                     <div className="App">
