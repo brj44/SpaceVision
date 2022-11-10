@@ -19,7 +19,7 @@ const appBarTheme = createTheme({
     },
 });
 
-const pages = ["Homepage", "EarthPage", "Apod", "Mars", "Fireball Data", "Graph page"];
+const pages = ["Homepage", "EarthPage", "Apod", "Mars", "Natural Events", "Fireball Data", "Graph page"];
 
 const Header = ({setPage}) =>
 {
