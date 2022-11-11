@@ -44,24 +44,27 @@ function EONET(){
             } 
 
             {
-            <div className="EventType">
-                <div className="Events">
-                    <label className='block'> <input type="radio" name="Event" value="" id="1" defaultChecked onChange={getEventType}   /> All events </label>
-                    <label className='block' ><input type="radio" name="Event" value="drought" id="2"  onChange={getEventType}/> Drought</label>
-                    <label className='block' ><input type="radio" name="Event" value="dustHaze" id="3" onChange={getEventType} /> DustHaze</label>
-                    <label className='block' ><input type="radio" name="Event" value="earthquakes" id="4" onChange={getEventType} /> Earthquakes</label>
-                    <label className='block' ><input type="radio" name="Event" value="floods" id="5" onChange={getEventType} /> Floods</label>
-                    <label className='block' ><input type="radio" name="Event" value="landslides" id="6" onChange={getEventType} /> Landslides</label>
-                    <label className='block' ><input type="radio" name="Event" value="manmade" id="7" onChange={getEventType} /> Manmade</label>
-                    <label className='block' ><input type="radio" name="Event" value="seaLakeIce" id="8" onChange={getEventType} /> SeaLakeIce</label>
-                    <label className='block' ><input type="radio" name="Event" value="severeStorms" id="9" onChange={getEventType} /> SevereStorms</label>
-                    <label className='block' ><input type="radio" name="Event" value="snow" id="10" onChange={getEventType} /> Snow</label>
-                    <label className='block' ><input type="radio" name="Event" value="tempExtremes" id="11" onChange={getEventType} /> TempExtremes</label>             
-                    <label className='block' ><input type="radio" name="Event" value="volcanoes" id="12" onChange={getEventType} /> Volcanoes</label>             
-                    <label className='block' ><input type="radio" name="Event" value="waterColor" id="13" onChange={getEventType} /> WaterColor</label>             
-                    <label className='block' ><input type="radio" name="Event" value="wildfires" id="14" onChange={getEventType} /> Wildfires</label>             
-                </div>
+            <div>
+            <select value={eventType} onChange={getEventType}>
+                <option value="">All Events</option>
+                <option value="drought">Drought</option>
+                <option value="dustHaze">DustHaze</option>
+                <option value="earthquakes">Earthquakes</option>
+                <option value="floods">Floods</option>
+                <option value="landslides">Landslides</option>
+                <option value="manmade">Manmade</option>
+                <option value="seaLakeIce">SeaLakeIce</option>
+                <option value="severeStorms">SevereStorms</option>
+                <option value="snow">Snow</option>
+                <option value="tempExtremes">TempExtremes</option>
+                <option value="volcanoes">Volcanoes</option>
+                <option value="waterColor">WaterColor</option>
+                <option value="wildfires">Wildfires</option>
+            </select>
             </div>
+            
+                    
+
             }
 
             {
