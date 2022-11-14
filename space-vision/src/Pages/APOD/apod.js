@@ -7,19 +7,23 @@ function Apod(){
 
     const [photo, setPhoto] = useState([]);
 
-    const fetchData = async () => {
-        setPhoto(await NasaPhoto());
-    }
+    const fetchData = async (date) => {
+        if (date === "") {
+            setPhoto(await NasaPhoto());
+        } else if (date !== "") {
+            setPhoto(await NasaPhoto(date));
+        }
+        }
+    
 
-    const [selected, setSelected] = useState('');
     const [date, setDate] = useState("");
 
     const handleDate = event => {
-    setSelected(event.target.value);
+    setDate(event.target.value);
     }
 
      const handleClicked = () => {
-        fetchData(selected).then(r => {
+        fetchData(date).then(r => {
             console.log(r);
         });
      }
