@@ -3,7 +3,7 @@ async function fetchPhoto(date){
     let response;
     if (date !== undefined)
     {
-        response = await fetch('https://api.nasa.gov/planetary/apod&date=' + date +'?api_key='+ APIKey);
+        response = await fetch('https://api.nasa.gov/planetary/apod?date=' + date +'&api_key='+ APIKey);
     }
     else
     {
