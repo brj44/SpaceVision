@@ -56,7 +56,7 @@ function Apod(){
                 <p> {photo.explanation} </p>
 
                 <h2> Want to see a different day? enter it below </h2>
-                <p1> Must be a date in the past </p1>
+                <p> Must be a date in the past </p>
                 <TextField
                     label="date"
                     id="date"
