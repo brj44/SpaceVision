@@ -25,6 +25,8 @@ function FireballPage(){
     const [yAxis, setYAxis] = useState("Velocity");
     const [xUnit, setXUnit] = useState("kJ");
     const [yUnit, setYUnit] = useState("km/s");
+    const [VData, setVData] = useState(8);
+    const [EData, setEData] = useState(1);
     const graphData = [];
 
     const handleMinDateChange = (event) => {
@@ -43,41 +45,51 @@ function FireballPage(){
 
     const handleXAxisChange = (event) => {
         setXAxis(event.target.value);
-        switch (xAxis){
+        switch (event.target.value) {
             case "Energy":
                 setXUnit("kJ");
+                setVData(1);
                 break;
             case "Velocity":
                 setXUnit("km/s");
+                setVData(8);
                 break;
             case "Altitude":
                 setXUnit("km");
+                setVData(7);
                 break;
             case "Impact Energy":
                 setXUnit("kJ");
+                setVData(2);
                 break;
             default:
                 setXUnit("kJ");
+                setVData(1);
         }
     }
 
     const handleYAxisChange = (event) => {
         setYAxis(event.target.value);
-        switch (yAxis){
+        switch (event.target.value) {
             case "Energy":
                 setYUnit("kJ");
+                setEData(1);
                 break;
             case "Velocity":
                 setYUnit("km/s");
+                setEData(8);
                 break;
             case "Altitude":
                 setYUnit("km");
+                setEData(7);
                 break;
             case "Impact Energy":
                 setYUnit("kJ");
+                setEData(2);
                 break;
             default:
                 setYUnit("km/s");
+                setEData(8);
         }
     }
 
@@ -98,39 +110,9 @@ function FireballPage(){
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    fireballData && fireballData.data && xAxis === "Energy" && yAxis === "Velocity" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[8], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Velocity" && yAxis === "Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[8], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Energy" && yAxis === "Altitude" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[7], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Altitude" && yAxis === "Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[7], E: fireball[8], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Energy" && yAxis === "Impact Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[8], E: fireball[2], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Impact Energy" && yAxis === "Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[2], E: fireball[8], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Velocity" && yAxis === "Altitude" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[1], E: fireball[7], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Altitude" && yAxis === "Velocity" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[7], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Velocity" && yAxis === "Impact Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[1], E: fireball[2], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Impact Energy" && yAxis === "Velocity" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[2], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Altitude" && yAxis === "Impact Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[7], E: fireball[2], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Impact Energy" && yAxis === "Altitude" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[2], E: fireball[7], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Altitude" && yAxis === "Altitude" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[7], E: fireball[7], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Impact Energy" && yAxis === "Impact Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[2], E: fireball[2], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Velocity" && yAxis === "Velocity" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[1], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Energy" && yAxis === "Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[8], E: fireball[8], D: fireball[0]})
-    )) : console.log("Loading");
+    fireballData && fireballData.data ? fireballData.data.map((fireball) => (
+        graphData.push({V: fireball[VData], E: fireball[EData], D: fireball[0]})
+    )): console.log("Loading");
 
 
     return(

@@ -48,13 +48,10 @@ function Graphpage(){
 
     const handleDataSetChange = (event) => {
         setDataSelection(event.target.value);
-        handleDataSetClicked();
-    }
-    const handleDataSetClicked = () => {
-        fetchData(selected).then(r => {
+        fetchData(selected, event.target.value).then(r => {
             console.log(r);
         });
-        switch (dataSelection){
+        switch (event.target.value) {
             case "CAD":
                 setXName('Velocity');
                 setXUnit("km/s");
@@ -76,8 +73,8 @@ function Graphpage(){
     }
     
 
-    const fetchData = async (selected) => {
-        if(dataSelection === 'CAD') {
+    const fetchData = async (selected, dataSet) => {
+        if(dataSet === undefined || dataSet === "CAD"){
             if (selected === "") {
                 setCadData(await CADAPICall());
             } else {
@@ -152,42 +149,20 @@ function Graphpage(){
                 </> : <>
                     <h1>Sentry Data</h1>
                 </>
+                
             }
-            <Box
-                display= "flex"
-                sx={{
-                    gap: 2,
-                }}
+            <Select
+                labelId="graph-select"
+                id="graph-select"
+                value= {dataSelection}
+                label="Data Set Selection"
+                onChange={handleDataSetChange}
+                className = {"input"}
             >
-                <Select
-                    labelId="graph-select"
-                    id="graph-select"
-                    value= {dataSelection}
-                    label="Data Set Selection"
-                    onChange={handleDataSetChange}
-                    className = {"input"}
-                >
-                    <MenuItem value={"CAD"}>Close Approach Data</MenuItem>
-                    <MenuItem value={"Sentry"}>Sentry Data</MenuItem>
-                </Select>
-                <Button
-                    onClick={handleDataSetClicked}
-                    variant="contained"
-                    style={{
-                        position: "relative",
-                        top: "15%",
-                        textTransform: "none",
-                        padding: "14px 0px",
-                        maxWidth: "50%",
-                        maxHeight: "60%",
-                        justifyContent: "center",
-                    }}
-                >
-                    Load Data Set
-                </Button>
-            </Box>
+                <MenuItem value={"CAD"}>Close Approach Data</MenuItem>
+                <MenuItem value={"Sentry"}>Sentry Data</MenuItem>
+            </Select>
 
-    
             {
                 cadData && cadData.data && (Number(cadData.count) === graphData.length || (graphData.length === 50 && dataSelection === "Sentry"))  ? <ScatterChart
                     width={600}
