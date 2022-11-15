@@ -13,6 +13,8 @@ import {
     CartesianGrid,
     Tooltip,
     Legend,
+    LineChart,
+    Line
 } from 'recharts';
 import MenuItem from "@mui/material/MenuItem";
 
@@ -27,6 +29,7 @@ function FireballPage(){
     const [yUnit, setYUnit] = useState("km/s");
     const [VData, setVData] = useState(8);
     const [EData, setEData] = useState(1);
+    const [graphType, setGraphType] = useState("Scatter");
     const graphData = [];
 
     const handleMinDateChange = (event) => {
@@ -91,6 +94,10 @@ function FireballPage(){
                 setYUnit("km/s");
                 setEData(8);
         }
+    }
+
+    const handleGraphChange = (event) => {
+        setGraphType(event.target.value);
     }
 
     const fetchData = async (minDate, maxDate) => {
@@ -191,38 +198,49 @@ function FireballPage(){
                     gap: 2,
                 }}
             >
-            <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value= {xAxis}
-                label="X Axis"
-                onChange={handleXAxisChange}
-                className = {"input"}
-            >
-                <MenuItem value={"Energy"}>Energy</MenuItem>
-                <MenuItem value={"Velocity"}>Velocity</MenuItem>
-                <MenuItem value={"Altitude"}>Altitude</MenuItem>
-                <MenuItem value={"Impact Energy"}>Impact Energy</MenuItem>
-            </Select>
+                <Select
+                    labelId="xAxis-select-label"
+                    id="xAxis-select"
+                    value= {xAxis}
+                    label="X Axis"
+                    onChange={handleXAxisChange}
+                    className = {"input"}
+                >
+                    <MenuItem value={"Energy"}>Energy</MenuItem>
+                    <MenuItem value={"Velocity"}>Velocity</MenuItem>
+                    <MenuItem value={"Altitude"}>Altitude</MenuItem>
+                    <MenuItem value={"Impact Energy"}>Impact Energy</MenuItem>
+                </Select>
 
-            <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value= {yAxis}
-                label="Y Axis"
-                onChange={handleYAxisChange}
-                className = {"input"}
-            >
-                <MenuItem value={"Energy"}>Energy</MenuItem>
-                <MenuItem value={"Velocity"}>Velocity</MenuItem>
-                <MenuItem value={"Altitude"}>Altitude</MenuItem>
-                <MenuItem value={"Impact Energy"}>Impact Energy</MenuItem>
-                <MenuItem value={""}></MenuItem>
-            </Select>
+                <Select
+                    labelId="yAxis-select-label"
+                    id="yAxis-select"
+                    value= {yAxis}
+                    label="Y Axis"
+                    onChange={handleYAxisChange}
+                    className = {"input"}
+                >
+                    <MenuItem value={"Energy"}>Energy</MenuItem>
+                    <MenuItem value={"Velocity"}>Velocity</MenuItem>
+                    <MenuItem value={"Altitude"}>Altitude</MenuItem>
+                    <MenuItem value={"Impact Energy"}>Impact Energy</MenuItem>
+                </Select>
+
+                <Select
+                    labelId="Graph-select-label"
+                    id="graph-select"
+                    value= {graphType}
+                    label="Graph Select"
+                    onChange={handleGraphChange}
+                    className = {"input"}
+                >
+                    <MenuItem value={"Scatter"}>Scatter</MenuItem>
+                    <MenuItem value={"Line"}>Line</MenuItem>
+                </Select>
             </Box>
 
             {
-                fireballData.count > 0  ?
+                fireballData.count > 0 && graphType === "Scatter" ?
                 <ScatterChart
                 width={600}
                 height={400}
@@ -240,7 +258,26 @@ function FireballPage(){
                 <Tooltip cursor={{strokeDasharray: '3 3'}}/>
                 <Legend/>
                 <Scatter name="Fireballs" data={graphData} fill="#8884d8" shape="star"/>
-                </ScatterChart> : <><h1>No Data</h1></>
+                </ScatterChart> : fireballData.count > 0 && graphType === "Line" ? <LineChart
+                            width={500}
+                            height={300}
+                            data={graphData}
+                            margin={{
+                                top: 5,
+                                right: 30,
+                                left: 20,
+                                bottom: 5,
+                            }}
+                        >
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="E"/>
+                            <YAxis/>
+                            <Tooltip />
+                            <Legend />
+                            <Line type="monotone" dataKey="E" name={xAxis} unit={xUnit} stroke="#82ca9d" />
+                            <Line type="monotone" dataKey="V" name={yAxis} unit={yUnit} stroke="#8884d8" activeDot={{ r: 8 }}/>
+
+                        </LineChart>: <><h1>No Data</h1></>
             }
 
         </>
