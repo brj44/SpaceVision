@@ -21,14 +21,14 @@ const SearchBar = ({setPage,setQuery}) =>{
         <label htmlFor="header-search">
            <span className="Search-Bar">Enter Query</span> 
         </label>
-        <input className='Search-Input-Box'
+        <input data-testid = "inputBar" className='Search-Input-Box'
             type="text" onChange={getInput}
             id="header-search"
         
             placeholder="Search NASA API "
             name="UserSearch" 
         />
-        <button onClick={() => {buttonClick()}} className='Search-Button' >Search</button>
+        <button data-testid="SearchBtn" onClick={() => {buttonClick()}} className='Search-Button' >Search</button>
         </div>
     )
     
