@@ -199,8 +199,8 @@ function FireballPage(){
                 }}
             >
                 <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
+                    labelId="xAxis-select-label"
+                    id="xAxis-select"
                     value= {xAxis}
                     label="X Axis"
                     onChange={handleXAxisChange}
@@ -213,8 +213,8 @@ function FireballPage(){
                 </Select>
 
                 <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
+                    labelId="yAxis-select-label"
+                    id="yAxis-select"
                     value= {yAxis}
                     label="Y Axis"
                     onChange={handleYAxisChange}
