@@ -3,7 +3,7 @@ async function EarthAPICall(longitude, latitude, date){
     let response;
     if (longitude === '' || latitude === '')
     {
-        response = await fetch('https://api.nasa.gov/planetary/earth/imagery?lon=29.8833&lat=97.9414&api_key=' + APIKey);
+        response = await fetch('https://api.nasa.gov/planetary/earth/assets?lon=-95.33&lat=29.78&date=2018-01-01&&dim=0.10&api_key=' + APIKey);
     }
     else if (date === undefined)
     {
