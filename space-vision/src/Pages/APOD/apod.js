@@ -6,7 +6,6 @@ import Button from "@mui/material/Button";
 function Apod(){
 
     const [photo, setPhoto] = useState([]);
-
     const fetchData = async (date) => {
         if (date === "") {
             setPhoto(await NasaPhoto());

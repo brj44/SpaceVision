@@ -6,10 +6,12 @@ import Menu from '@mui/material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import MenuIcon from "@mui/icons-material/Menu";
 import {useState} from "react"
 import { createTheme } from '@mui/material/styles';
 import { grey } from '@mui/material/colors';
-import {ThemeProvider} from "@mui/material";
+import {Avatar, IconButton, ThemeProvider} from "@mui/material";
+import fadedLogo from '../../images/FadedLogo.png';
 
 const appBarTheme = createTheme({
     palette: {
@@ -19,7 +21,7 @@ const appBarTheme = createTheme({
     },
 });
 
-const pages = ["Homepage", "EarthPage", "Apod", "Mars", "Natural Events", "Fireball Data", "Graph page"];
+const pages = ["HOMEPAGE", "EARTHPAGE", "APOD", "MARS", "NATURAL EVENTS", "FIREBALL DATA", "GRAPH PAGE"];
 
 const Header = ({setPage}) =>
 {
@@ -27,8 +29,12 @@ const Header = ({setPage}) =>
 
 
 
-    const handleCloseNavMenu = () => {
+    const handleCloseNavMenu = (page) => {
+        setPage(page);
         setAnchorElNav(null);
+    }
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
     }
 
     return (
@@ -54,6 +60,16 @@ const Header = ({setPage}) =>
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                            <IconButton
+                                size="large"
+                                aria-label="account of current user"
+                                aria-controls="menu-appbar"
+                                aria-haspopup="true"
+                                onClick={handleOpenNavMenu}
+                                color="inherit"
+                            >
+                                <MenuIcon />
+                            </IconButton>
                             <Menu
                                 id="menu-appbar"
                                 anchorEl={anchorElNav}
@@ -74,14 +90,14 @@ const Header = ({setPage}) =>
                             >
                                 {pages.map((page) => (
                                     <MenuItem key={page}
-                                              onClick={()=> {setPage(page)}}
+                                              onClick={()=> {handleCloseNavMenu(page)}}
                                     >
                                         <Typography textAlign="center">{page}</Typography>
                                     </MenuItem>
                                 ))}
                             </Menu>
                         </Box>
-
+                        <Avatar alt="Space Vision logo" src={fadedLogo}/>
                         <Typography
                             variant="h5"
                             noWrap
@@ -98,13 +114,13 @@ const Header = ({setPage}) =>
                                 textDecoration: 'none',
                             }}
                         >
-                            SPACE VISION
+                              SPACE VISION
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (
                                 <Button
                                     key={page}
-                                    onClick={()=> {setPage(page)}}
+                                    onClick={()=> {handleCloseNavMenu(page)}}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
                                 >
                                     {page}

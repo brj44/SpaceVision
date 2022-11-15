@@ -13,6 +13,8 @@ import {
     CartesianGrid,
     Tooltip,
     Legend,
+    LineChart,
+    Line
 } from 'recharts';
 import MenuItem from "@mui/material/MenuItem";
 
@@ -25,6 +27,9 @@ function FireballPage(){
     const [yAxis, setYAxis] = useState("Velocity");
     const [xUnit, setXUnit] = useState("kJ");
     const [yUnit, setYUnit] = useState("km/s");
+    const [VData, setVData] = useState(8);
+    const [EData, setEData] = useState(1);
+    const [graphType, setGraphType] = useState("Scatter");
     const graphData = [];
 
     const handleMinDateChange = (event) => {
@@ -43,42 +48,56 @@ function FireballPage(){
 
     const handleXAxisChange = (event) => {
         setXAxis(event.target.value);
-        switch (xAxis){
+        switch (event.target.value) {
             case "Energy":
                 setXUnit("kJ");
+                setVData(1);
                 break;
             case "Velocity":
                 setXUnit("km/s");
+                setVData(8);
                 break;
             case "Altitude":
                 setXUnit("km");
+                setVData(7);
                 break;
             case "Impact Energy":
                 setXUnit("kJ");
+                setVData(2);
                 break;
             default:
                 setXUnit("kJ");
+                setVData(1);
         }
     }
 
     const handleYAxisChange = (event) => {
         setYAxis(event.target.value);
-        switch (yAxis){
+        switch (event.target.value) {
             case "Energy":
                 setYUnit("kJ");
+                setEData(1);
                 break;
             case "Velocity":
                 setYUnit("km/s");
+                setEData(8);
                 break;
             case "Altitude":
                 setYUnit("km");
+                setEData(7);
                 break;
             case "Impact Energy":
                 setYUnit("kJ");
+                setEData(2);
                 break;
             default:
                 setYUnit("km/s");
+                setEData(8);
         }
+    }
+
+    const handleGraphChange = (event) => {
+        setGraphType(event.target.value);
     }
 
     const fetchData = async (minDate, maxDate) => {
@@ -98,39 +117,9 @@ function FireballPage(){
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    fireballData && fireballData.data && xAxis === "Energy" && yAxis === "Velocity" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[8], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Velocity" && yAxis === "Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[8], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Energy" && yAxis === "Altitude" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[7], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Altitude" && yAxis === "Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[7], E: fireball[8], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Energy" && yAxis === "Impact Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[8], E: fireball[2], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Impact Energy" && yAxis === "Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[2], E: fireball[8], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Velocity" && yAxis === "Altitude" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[1], E: fireball[7], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Altitude" && yAxis === "Velocity" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[7], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Velocity" && yAxis === "Impact Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[1], E: fireball[2], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Impact Energy" && yAxis === "Velocity" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[2], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Altitude" && yAxis === "Impact Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[7], E: fireball[2], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Impact Energy" && yAxis === "Altitude" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[2], E: fireball[7], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Altitude" && yAxis === "Altitude" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[7], E: fireball[7], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Impact Energy" && yAxis === "Impact Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[2], E: fireball[2], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Velocity" && yAxis === "Velocity" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[1], E: fireball[1], D: fireball[0]})
-    )) : fireballData && fireballData.data && xAxis === "Energy" && yAxis === "Energy" ? fireballData.data.map((fireball) => (
-        graphData.push({V: fireball[8], E: fireball[8], D: fireball[0]})
-    )) : console.log("Loading");
+    fireballData && fireballData.data ? fireballData.data.map((fireball) => (
+        graphData.push({V: fireball[VData], E: fireball[EData], D: fireball[0]})
+    )): console.log("Loading");
 
 
     return(
@@ -209,38 +198,49 @@ function FireballPage(){
                     gap: 2,
                 }}
             >
-            <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value= {xAxis}
-                label="X Axis"
-                onChange={handleXAxisChange}
-                className = {"input"}
-            >
-                <MenuItem value={"Energy"}>Energy</MenuItem>
-                <MenuItem value={"Velocity"}>Velocity</MenuItem>
-                <MenuItem value={"Altitude"}>Altitude</MenuItem>
-                <MenuItem value={"Impact Energy"}>Impact Energy</MenuItem>
-            </Select>
+                <Select
+                    labelId="xAxis-select-label"
+                    id="xAxis-select"
+                    value= {xAxis}
+                    label="X Axis"
+                    onChange={handleXAxisChange}
+                    className = {"input"}
+                >
+                    <MenuItem value={"Energy"}>Energy</MenuItem>
+                    <MenuItem value={"Velocity"}>Velocity</MenuItem>
+                    <MenuItem value={"Altitude"}>Altitude</MenuItem>
+                    <MenuItem value={"Impact Energy"}>Impact Energy</MenuItem>
+                </Select>
 
-            <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value= {yAxis}
-                label="Y Axis"
-                onChange={handleYAxisChange}
-                className = {"input"}
-            >
-                <MenuItem value={"Energy"}>Energy</MenuItem>
-                <MenuItem value={"Velocity"}>Velocity</MenuItem>
-                <MenuItem value={"Altitude"}>Altitude</MenuItem>
-                <MenuItem value={"Impact Energy"}>Impact Energy</MenuItem>
-                <MenuItem value={""}></MenuItem>
-            </Select>
+                <Select
+                    labelId="yAxis-select-label"
+                    id="yAxis-select"
+                    value= {yAxis}
+                    label="Y Axis"
+                    onChange={handleYAxisChange}
+                    className = {"input"}
+                >
+                    <MenuItem value={"Energy"}>Energy</MenuItem>
+                    <MenuItem value={"Velocity"}>Velocity</MenuItem>
+                    <MenuItem value={"Altitude"}>Altitude</MenuItem>
+                    <MenuItem value={"Impact Energy"}>Impact Energy</MenuItem>
+                </Select>
+
+                <Select
+                    labelId="Graph-select-label"
+                    id="graph-select"
+                    value= {graphType}
+                    label="Graph Select"
+                    onChange={handleGraphChange}
+                    className = {"input"}
+                >
+                    <MenuItem value={"Scatter"}>Scatter</MenuItem>
+                    <MenuItem value={"Line"}>Line</MenuItem>
+                </Select>
             </Box>
 
             {
-                fireballData.count > 0  ?
+                fireballData.count > 0 && graphType === "Scatter" ?
                 <ScatterChart
                 width={600}
                 height={400}
@@ -258,7 +258,26 @@ function FireballPage(){
                 <Tooltip cursor={{strokeDasharray: '3 3'}}/>
                 <Legend/>
                 <Scatter name="Fireballs" data={graphData} fill="#8884d8" shape="star"/>
-                </ScatterChart> : <><h1>No Data</h1></>
+                </ScatterChart> : fireballData.count > 0 && graphType === "Line" ? <LineChart
+                            width={500}
+                            height={300}
+                            data={graphData}
+                            margin={{
+                                top: 5,
+                                right: 30,
+                                left: 20,
+                                bottom: 5,
+                            }}
+                        >
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="E"/>
+                            <YAxis/>
+                            <Tooltip />
+                            <Legend />
+                            <Line type="monotone" dataKey="E" name={xAxis} unit={xUnit} stroke="#82ca9d" />
+                            <Line type="monotone" dataKey="V" name={yAxis} unit={yUnit} stroke="#8884d8" activeDot={{ r: 8 }}/>
+
+                        </LineChart>: <><h1>No Data</h1></>
             }
 
         </>
