@@ -16,7 +16,7 @@ import EONET from "../Pages/EONET/EONET"
 
 function App() {
     const [data, setData] = useState([]);
-    const [page, setPage] = useState("Homepage");
+    const [page, setPage] = useState("HOMEPAGE");
     const [query,setQuery] = useState("")
     
     /*
@@ -45,7 +45,7 @@ function App() {
 
     //This is the main "meat" of a react file. This is the component that gets rendered.
     switch (page){
-        case "Homepage":
+        case "HOMEPAGE":
             return(
                 <div className="App">
                     <header className="Home">
@@ -60,7 +60,7 @@ function App() {
                     </header>
                 </div>
             );
-        case "EarthPage":
+        case "EARTHPAGE":
             return(
                 <div className="App">
                     <header className="App-header">
@@ -75,7 +75,7 @@ function App() {
                     </header>
                 </div>
             );
-            case "Apod":
+            case "APOD":
             return(
                 <div className="App">
                     <header className="App-header">
@@ -90,7 +90,7 @@ function App() {
                     </header>
                 </div>
             );
-            case "Fireball Data":
+            case "FIREBALL DATA":
                 return(
                     <div className="App">
                         <header className="App-header">
@@ -118,7 +118,7 @@ function App() {
                     </header>
                 </div>
             );
-            case "Mars":
+            case "MARS":
                 return(
                     <div className="App">
                         <header className="App-header">
@@ -133,7 +133,7 @@ function App() {
                         </header>
                     </div>
                 );
-                case "Natural Events":
+                case "NATURAL EVENTS":
                     return(
                         <div className="App">
                             <header className="App-header">
@@ -148,7 +148,7 @@ function App() {
                             </header>
                         </div>
                     );
-            case "Graph page":
+            case "GRAPH PAGE":
                 return(
                     <div className="App">
                         <header className="App-header">
