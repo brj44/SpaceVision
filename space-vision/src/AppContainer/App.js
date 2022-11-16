@@ -120,8 +120,8 @@ function App() {
             );
             case "MARS":
                 return(
-                    <div className="App">
-                        <header className="App-header">
+                    <div className="AppMars">
+                        <header className="MarsBackground">
                             <Header
                                 setPage = {setPage}
                             />
