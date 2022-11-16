@@ -53,16 +53,12 @@ export default function Marz(){
 
     return(
         <>
-            <h1>Mars</h1>
+            <h1>Mars Rover Photos</h1>
             {
-            <div className="EnterDate">ENTER DATE: 
+            <div className="selectionzBox">
+                ENTER DATE: 
                 <input className="TextInput" id="TextInput" onChange={getDate} placeholder=" YYYY-MM-DD "/>
-                <button className="Button" onClick={clicked}>Search</button>
-            </div>
-            } 
-
-            {
-            <div className="rover">
+                <button className="MarsButton" onClick={clicked}>Search</button>
                 <div className="SelectRover">Select Rover:
                     <label className='block'> <input type="radio" name="rover" value="curiosity" id="curiosity" defaultChecked onChange={getRover}   /> Curiosity <div className="Range">Range: 2012-08-06  to  today</div></label>
                     <label className='block' ><input type="radio" name="rover" value="opportunity" id="opportunity"  onChange={getRover}/> Opportunity<div className="Range">Range: 2004-01-26 to 2018-06-11</div></label>
@@ -71,25 +67,31 @@ export default function Marz(){
             </div>
             
             }
-
+            <div className="grid">
             {
+                
                 firstCall&&data.photos.length===0?<p>No images found</p>:
 
                 data.photos? data.photos.map((x) => {
                     return (                     
-                        <div key = {x.id}>
-                            <p>id: {x.id}, earth date: {x.earth_date}, rover: {x.rover.name}, camera: {x.camera.full_name}</p>
-                            <img
-                            src = {x.img_src}
-                            alt = {x.id}
-                            />
-                            <p>---------------------------------------------------------</p>
+                        <div className="Zcontainer" key = {x.id}>
+                            <p className="cameraLine">{x.camera.full_name}</p>
+                            <p className="dateLine">Date: {x.earth_date}</p>
+                            <p className="roverLine">Rover: {x.rover.name}</p>
+                                <img className="pics"
+                                    src = {x.img_src}
+                                    alt = {x.id}
+                                />
+                            <p className="id">id: {x.id}</p>
+                           
                         </div>
                     
                     )
                 }) : <h1>Error</h1>
+            
             }
-        
+        </div>
         </>
     )
 }
+

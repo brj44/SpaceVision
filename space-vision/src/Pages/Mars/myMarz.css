@@ -1,18 +1,64 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.id{
+    margin-top: -5px;
+    font-size: 20px;
+}
+.cameraLine{
+    margin-top: 4px;
+    margin-bottom: -5px;
+    font-size: 30px;
+    color:#ffddf0;
+}
+.dateLine{
+    margin: -5px;
+    font-size: 30px;
+}
+.roverLine{
+    margin: -5px;
+    font-size: 30px;
+}
+
+.Zcontainer{
+    background: rgba(255, 84, 104, 0.499);
+border: 2px solid rgb(255, 84, 104);
+padding: 0px;
+color: black;
+margin: 0px;
+margin-left: 00px;
+width: 400px;
+height: 500px;
+border-radius: 20px;
+
+}
+
+.pics{
+    width: 300px;
+    min-height: auto;
+    border-radius: 15px;
+    margin-top: 19px;
+    
+}
+
 .EnterDate{
     position: relative;
     outline: black;
-    font-size: 20px;
-    color: #eacbdd;
+    font-size: 30px;
+    color: #fdc8c8;
 }
 
-.Button {
-    background-color: #eacbdd;
+.MarsButton {
+    background-color: #da9abe;
     border-radius: 2px;
-    color: rgb(7, 0, 7);
+    color: rgb(238, 39, 39);
     font-size: 20px;
     font-weight: 400;
     outline: none;
-    padding:1px ;
+    padding:0px ;
     position: relative;
     text-align: center;
 
@@ -21,7 +67,7 @@
 .TextInput{
     padding: 0;
     position: relative;
-    outline: black;
+    outline: rgb(1, 1, 1);
     font-size: 20px;
     margin-left: 10px;
     width : 140px;
@@ -37,14 +83,24 @@
     margin-left: 20px;
     margin-top: 5px;
     font-size: 20px;
-    color:rgb(231, 128, 228);
+    color:rgb(239, 184, 184);
+    font-weight: bold;
 }
 .SelectRover{
     
-    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-top: 0px;
     text-align: left;
     
 }
 
-
+.selectionzBox{
+    background: rgba(255, 84, 104, 0.693);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -0px;
+    padding-bottom: 0px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
 
