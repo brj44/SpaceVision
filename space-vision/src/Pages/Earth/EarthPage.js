@@ -1,9 +1,14 @@
 import EPICAPICall from "../../APIs/EPICAPICall";
+import EarthAPICall from "../../APIs/Earth"
 import {useEffect, useState} from "react";
 
 function EarthPage(){
 
     const [photo, setPhoto] = useState([]);
+    const [satellite, setSatellite] = useState([]);
+    const [date, setDate] = useState("");
+    const [longitude, setLongitude] = useState("");
+    const [latitude, setLatitude] = useState("");
 
     let photoUrl = "";
     let photoDate = null;
@@ -11,6 +16,7 @@ function EarthPage(){
 
     const fetchData = async () => {
         setPhoto(await EPICAPICall());
+        setSatellite(await EarthAPICall(longitude, latitude, date));
     }
 
     function getPhotoUrl() {
@@ -25,7 +31,7 @@ function EarthPage(){
         fetchData().then(r => {
             console.log(r);
         });
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     photo[0]?  getPhotoUrl(): console.log("loading");
@@ -45,6 +51,13 @@ function EarthPage(){
                 <p>Longitude: {photo[0].centroid_coordinates.lon}</p>
             </> : <h1>Loading...</h1>
         }
+
+        <h1> Satellite Earth Images </h1>
+        <img
+                        src = {satellite.url}
+                        alt= "satellite"
+                        width = "750"
+                    />
         </>
 
     )
