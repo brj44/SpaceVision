@@ -4,7 +4,7 @@ function MarsWeather(){
 
     return(
         <div className='styling'> 
-             <iframe className='marsNASA'src='https://mars.nasa.gov/layout/embed/image/mslweather/'  scrolling='no' frameborder='0'></iframe>
+             <iframe title="weatherInfo" className='marsNASA'src='https://mars.nasa.gov/layout/embed/image/mslweather/'  scrolling='no' frameBorder='0'></iframe>
         </div>
     )
 }
