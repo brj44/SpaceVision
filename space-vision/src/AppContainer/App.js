@@ -12,6 +12,7 @@ import SearchResults from "../Pages/DisplaySearchResults/DisplaySearchResults";
 import Marz from "../Pages/Mars/myMarz";
 import Graphpage from "../Pages/GraphPage/graphpage"
 import EONET from "../Pages/EONET/EONET"
+import MarsWeather from "../Pages/Mars Weather/MarsWeather"
 
 
 function App() {
@@ -133,21 +134,36 @@ function App() {
                         </header>
                     </div>
                 );
-                case "NATURAL EVENTS":
-                    return(
-                        <div className="App">
-                            <header className="App-header">
-                                <Header
-                                    setPage = {setPage}
+            case "MARS WEATHER":
+                return(
+                    <div className="AppMars">
+                        <header className="MarsBackground">
+                            <Header
+                                setPage = {setPage}
+                            />
+                                <SearchBar
+                            setPage = {setPage}
+                            setQuery = {setQuery}
+                            />
+                            <MarsWeather/>
+                        </header>
+                    </div>
+                );
+            case "NATURAL EVENTS":
+                return(
+                    <div className="App">
+                        <header className="App-header">
+                            <Header
+                                setPage = {setPage}
+                            />
+                                <SearchBar
+                                setPage = {setPage}
+                                setQuery = {setQuery}
                                 />
-                                 <SearchBar
-                                    setPage = {setPage}
-                                    setQuery = {setQuery}
-                                    />
-                                <EONET/>
-                            </header>
-                        </div>
-                    );
+                            <EONET/>
+                        </header>
+                    </div>
+                );
             case "GRAPH PAGE":
                 return(
                     <div className="App">
