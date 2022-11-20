@@ -13,6 +13,7 @@ import Marz from "../Pages/Mars/myMarz";
 import Graphpage from "../Pages/GraphPage/graphpage"
 import EONET from "../Pages/EONET/EONET"
 import MarsWeather from "../Pages/Mars Weather/MarsWeather"
+import AboutPage from "../Pages/AboutPage/AboutPage"
 
 
 function App() {
@@ -106,6 +107,21 @@ function App() {
                         </header>
                     </div>
                 );
+            case "ABOUT US":
+                return(
+                    <div className="App">
+                        <header className="App-header">
+                            <Header
+                                setPage = {setPage}
+                            />
+                             <SearchBar
+                            setPage = {setPage}
+                            setQuery = {setQuery}
+                            />
+                            <AboutPage/>
+                        </header>
+                    </div>
+                );
             case "Search Page":
                 return(
                 <div className="App">
@@ -113,9 +129,13 @@ function App() {
                         <Header
                             setPage = {setPage}
                         />
-                        <SearchResults 
+                         <SearchResults 
                             searchKey = {query}
                         />
+                        <SearchBar
+                            setPage = {setPage}
+                            setQuery = {setQuery}
+                            />
                     </header>
                 </div>
             );
