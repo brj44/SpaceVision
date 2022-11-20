@@ -129,6 +129,9 @@ function App() {
                         <Header
                             setPage = {setPage}
                         />
+                         <SearchResults 
+                            searchKey = {query}
+                        />
                         <SearchBar
                             setPage = {setPage}
                             setQuery = {setQuery}
