@@ -13,6 +13,7 @@ import Marz from "../Pages/Mars/myMarz";
 import Graphpage from "../Pages/GraphPage/graphpage"
 import EONET from "../Pages/EONET/EONET"
 import MarsWeather from "../Pages/Mars Weather/MarsWeather"
+import AboutPage from "../Pages/AboutPage/AboutPage"
 
 
 function App() {
