@@ -1,0 +1,17 @@
+.header{
+    font-size: xx-large;
+    color: rgb(243, 245, 244);
+    padding-bottom: 100px;
+}
+.About{
+    font-size: larger;
+    color: rgb(15, 233, 241);
+    padding-bottom: 300px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: justify;
+}
+.createdBy{
+    font-size: medium;
+    color: aqua;
+}
