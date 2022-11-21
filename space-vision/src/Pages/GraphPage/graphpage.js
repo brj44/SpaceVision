@@ -71,7 +71,7 @@ function Graphpage(){
                 setYUnit("au");
         }
     }
-    
+
 
     const fetchData = async (selected, dataSet) => {
         if(dataSet === undefined || dataSet === "CAD"){
@@ -124,7 +124,6 @@ function Graphpage(){
                                 <option value="Satrn">Saturn</option>
                                 <option value="Urnus">Uranus</option>
                                 <option value="Neptn">Neptune</option>
-                                <option value="Pluto">Pluto</option>
                                 <option value="Moon">Moon</option>
                             </select>
                         </div>
@@ -149,7 +148,7 @@ function Graphpage(){
                 </> : <>
                     <h1>Sentry Data</h1>
                 </>
-                
+
             }
             <Select
                 labelId="graph-select"
@@ -181,7 +180,7 @@ function Graphpage(){
                     <Tooltip cursor={{strokeDasharray: '3 3'}}/>
                     <Legend/>
                     <Scatter name={dataSelection} data={graphData} fill="#8884d8" shape="circle"/>
-                </ScatterChart> : <><h1>Loading Data</h1></>
+                </ScatterChart> : cadData && (Number(cadData.count)) === 0 ? <h1> No Data </h1>:<><h1>Loading Data</h1></>
             }
 
         </>
