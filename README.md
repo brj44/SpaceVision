@@ -12,6 +12,7 @@
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
+* [Citations](#citations)
 
 ## General Information
 ![Space Vision Logo](README_Imgs/SpaceVisionLogoV1.png)
@@ -39,6 +40,14 @@
 	- As a student I would like to be able to view data from nasa's open apis in an easy to digest format.
 - ABOUT: About page ( will explain to the user how the website can be navigated and why the website was created)
 	- As a user, I would like an about page that explains what the website is about.
+
+## Citations
+-'Natural Events' page images all from "https://www.clipartmax.com/", except for the following:
+SevereStorms - "https://openclipart.org/"
+WaterColor - "https://iconarchive.com/"
+DustHaze - "https://www.citypng.com/"
+
+-Mars weather embedded credit to "https://mars.nasa.gov/msl/weather/"
 
 ## Sprint 1
 ![SpaceVisionHp](README_Imgs/SVHomepageS1.jpg)
