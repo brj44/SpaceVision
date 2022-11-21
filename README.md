@@ -49,6 +49,11 @@ DustHaze - "https://www.citypng.com/"
 
 -Mars weather embedded credit to "https://mars.nasa.gov/msl/weather/"
 
+-Background images:
+	Homepage background - "https://www.nasa.gov/feature/goddard/2017/nasa-s-webb-telescope-to-witness-galactic-infancy"
+	Mars page background - "https://shab42.artstation.com/projects/6adXEW"
+	All other pages background - "https://www.freepik.com/premium-photo/stars-dark-blue-sky-night_7224165.htm" (self-modified)
+
 ## Sprint 1
 ![SpaceVisionHp](README_Imgs/SVHomepageS1.jpg)
 ![SpaceVisionEp](README_Imgs/SVEarthpageS1.jpg)
