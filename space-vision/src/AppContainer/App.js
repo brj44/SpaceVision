@@ -132,10 +132,6 @@ function App() {
                          <SearchResults 
                             searchKey = {query}
                         />
-                        <SearchBar
-                            setPage = {setPage}
-                            setQuery = {setQuery}
-                            />
                     </header>
                 </div>
             );
