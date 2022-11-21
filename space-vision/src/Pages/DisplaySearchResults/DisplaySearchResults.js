@@ -45,7 +45,7 @@ const displayResults=()=>{
         for(var i = 0; i < apiResults.length; i++){
              //results.push(<header className="header-info">{apiResults[i].title}</header>)
              if(apiResults[i].data[0].media_type === "image"){
-                    results.push(<header className="header-info">{count + 1}).  {apiResults[i].data[0].title}</header>)
+                   results.push(<header className="header-info">{count + 1}).  {apiResults[i].data[0].title}</header>)
                     results.push(<img
                     alt = {apiResults[i].data[0].title}
                     width = '600px'
@@ -53,9 +53,10 @@ const displayResults=()=>{
                     src = {apiResults[i].links[0].href}
                 />)
                 
-                
-                results.push(<p className="search-info">{apiResults[i].data[0].description}</p>)
-                results.push(<p className="search-date">{apiResults[i].data[0].date_created}</p>)
+                let output = "<p>" + apiResults[i].data[0].description + "</p>"
+                console.log("output:",output)
+                results.push(<div className="search-info" dangerouslySetInnerHTML={{__html: output}}/>)
+                results.push(<p className="search-date">Date Captured:  {apiResults[i].data[0].date_created}</p>)
                 
                 
             console.log("RESULTS --------- ", results)
@@ -69,14 +70,15 @@ const displayResults=()=>{
     else {
         results.push(<header className="header-error">Try to search again. No results Found</header>)
     }
-    return results
+    return  results
 }
     return(
      
         <div>
         <header className= "top10"> TOP 10 RESULTS</header>
-            {displayResults()}
-        </div>
+           {displayResults()}
+         </div>
+        
       
     )
 }
