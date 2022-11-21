@@ -48,13 +48,15 @@ const displayResults=()=>{
                     results.push(<header className="header-info">{count + 1}).  {apiResults[i].data[0].title}</header>)
                     results.push(<img
                     alt = {apiResults[i].data[0].title}
-                    width = '700x'
-                    height= '700px'
+                    width = '600px'
+                    height= '550px'
                     src = {apiResults[i].links[0].href}
                 />)
-
+                
+                
                 results.push(<p className="search-info">{apiResults[i].data[0].description}</p>)
                 results.push(<p className="search-date">{apiResults[i].data[0].date_created}</p>)
+                
                 
             console.log("RESULTS --------- ", results)
             count++;
@@ -70,10 +72,12 @@ const displayResults=()=>{
     return results
 }
     return(
+     
         <div>
         <header className= "top10"> TOP 10 RESULTS</header>
             {displayResults()}
         </div>
+      
     )
 }
 
