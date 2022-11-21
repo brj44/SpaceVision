@@ -48,8 +48,9 @@ const displayResults=()=>{
                    results.push(<header className="header-info">{count + 1}).  {apiResults[i].data[0].title}</header>)
                     results.push(<img
                     alt = {apiResults[i].data[0].title}
+                    
                     width = '600px'
-                    height= '550px'
+                    height= 'auto'
                     src = {apiResults[i].links[0].href}
                 />)
                 
