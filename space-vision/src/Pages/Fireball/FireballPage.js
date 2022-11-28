@@ -14,7 +14,7 @@ import {
     Tooltip,
     Legend,
     LineChart,
-    Line
+    Line, ResponsiveContainer
 } from 'recharts';
 import MenuItem from "@mui/material/MenuItem";
 
@@ -243,43 +243,55 @@ function FireballPage(){
 
             {
                 fireballData.count > 0 && graphType === "Scatter" ?
-                <ScatterChart
-                width={600}
-                height={400}
-                margin={{
-                top: 20,
-                right: 45,
-                bottom: 20,
-                left: 45,
-            }}
-                >
-                <CartesianGrid/>
-                <XAxis type="number" dataKey="E" name={xAxis} unit={xUnit}/>
-                <YAxis type="number" dataKey="V" name={yAxis} unit={yUnit}/>
-                <ZAxis type="string" dataKey="D" name="Date and Time" unit=""/>
-                <Tooltip cursor={{strokeDasharray: '3 3'}}/>
-                <Legend/>
-                <Scatter name="Fireballs" data={graphData} fill="#8884d8" shape="star"/>
-                </ScatterChart> : fireballData.count > 0 && graphType === "Line" ? <LineChart
-                            width={500}
-                            height={300}
-                            data={graphData}
-                            margin={{
-                                top: 5,
-                                right: 30,
-                                left: 20,
-                                bottom: 5,
-                            }}
+                    <ResponsiveContainer
+                        width={"95%"}
+                        height= {400}
+                    >
+                        <ScatterChart
+                        width={600}
+                        height={400}
+                        margin={{
+                        top: 20,
+                        right: 45,
+                        bottom: 20,
+                        left: 45,
+                        }}
                         >
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="E"/>
-                            <YAxis/>
-                            <Tooltip />
-                            <Legend />
-                            <Line type="monotone" dataKey="E" name={xAxis} unit={xUnit} stroke="#82ca9d" />
-                            <Line type="monotone" dataKey="V" name={yAxis} unit={yUnit} stroke="#8884d8" activeDot={{ r: 8 }}/>
+                        <CartesianGrid/>
+                        <XAxis type="number" dataKey="E" name={xAxis} unit={xUnit}/>
+                        <YAxis type="number" dataKey="V" name={yAxis} unit={yUnit}/>
+                        <ZAxis type="string" dataKey="D" name="Date and Time" unit=""/>
+                        <Tooltip cursor={{strokeDasharray: '3 3'}}/>
+                        <Legend/>
+                        <Scatter name="Fireballs" data={graphData} fill="#8884d8" shape="star"/>
+                        </ScatterChart>
+                    </ResponsiveContainer>:
+                    fireballData.count > 0 && graphType === "Line" ?
+                        <ResponsiveContainer
+                            width={"95%"}
+                            height= {400}
+                        >
+                            <LineChart
+                                width={500}
+                                height={300}
+                                data={graphData}
+                                margin={{
+                                    top: 5,
+                                    right: 30,
+                                    left: 20,
+                                    bottom: 5,
+                                }}
+                            >
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="E"/>
+                                <YAxis/>
+                                <Tooltip />
+                                <Legend />
+                                <Line type="monotone" dataKey="E" name={xAxis} unit={xUnit} stroke="#82ca9d" />
+                                <Line type="monotone" dataKey="V" name={yAxis} unit={yUnit} stroke="#8884d8" activeDot={{ r: 8 }}/>
 
-                        </LineChart>: <><h1>No Data</h1></>
+                            </LineChart>
+                        </ResponsiveContainer> : <><h1>No Data</h1></>
             }
             <p>    </p>
         </>
