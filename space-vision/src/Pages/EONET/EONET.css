@@ -5,99 +5,99 @@ padding: 10px;
 color: black;
 margin: 10px;
 margin-left: -300px;
-width: 700px;
+width: 100%;
 height: 70px;
 border-radius: 30px;
 }
 
 .storm{
-max-width: 10%;  
-height: auto; 
+max-width: 10%;
+height: auto;
 float:left;
 position: bottom;
 }
 
 .fire{
-    max-width: 8%;  
-    height: auto; 
+    max-width: 8%;
+    height: auto;
     float:left;
     margin-left: 10px;
     margin-top: -6px;;
 }
 
 .drought{
-    max-width: 8%;  
-    height: auto; 
+    max-width: 8%;
+    height: auto;
     float:left;
     margin-left: 10px;
 }
 
 .dust{
-    max-width: 8%;  
-    height: auto; 
+    max-width: 8%;
+    height: auto;
     float:left;
     margin-left: 10px;
 }
 
 .earthquake{
-    max-width: 8%;  
-    height: auto; 
+    max-width: 8%;
+    height: auto;
     float:left;
     margin-left: 10px;
 }
 
 .floods{
-    max-width: 8%;  
-    height: auto; 
+    max-width: 8%;
+    height: auto;
     float:left;
     margin-left: 10px;
 }
 
 .landslides{
-    max-width: 10%;  
-    height: auto; 
+    max-width: 10%;
+    height: auto;
     float:left;
     margin-left: 10px;
 }
 
 .manmade{
-    max-width: 10%;  
-    height: auto; 
+    max-width: 10%;
+    height: auto;
     float:left;
     margin-left: 10px;
 }
 
 .seaLakeIce{
-    max-width: 10%;  
-    height: auto; 
+    max-width: 10%;
+    height: auto;
     float:left;
     margin-left: 10px;
 }
 
 .snow{
-    max-width: 10%;  
-    height: auto; 
+    max-width: 10%;
+    height: auto;
     float:left;
     margin-left: 10px;
 }
 
 .tempExtremes{
-    max-width: 10%;  
-    height: auto; 
+    max-width: 10%;
+    height: auto;
     float:left;
     margin-left: 10px;
 }
 
 .volcanoes{
-    max-width: 10%;  
-    height: auto; 
+    max-width: 10%;
+    height: auto;
     float:left;
     margin-left: 10px;
 }
 
 .waterColor{
-    max-width: 10%;  
-    height: auto; 
+    max-width: 10%;
+    height: auto;
     float:left;
     margin-left: 10px;
 }
@@ -109,7 +109,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -123,7 +123,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -137,7 +137,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -150,8 +150,8 @@ position: bottom;
       padding: 10px;
       color:black;
       margin: -12px;
-      margin-left:88px ;
-      width: 970px;
+      margin-left:88px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -165,7 +165,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -179,7 +179,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -193,7 +193,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -207,7 +207,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -221,7 +221,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -235,7 +235,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -249,7 +249,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -263,7 +263,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -277,7 +277,7 @@ position: bottom;
       color:black;
       margin: -12px;
       margin-left:88px ;
-      width: 970px;
+      width: 100%;
       height: 70px;
       border-left-style: dashed;
       border-top-right-radius: 30px;
@@ -290,7 +290,7 @@ position: bottom;
 
 .title{
     margin:-10px;
-  
+
     font-weight:bold;
     color:pink;
 }
@@ -320,7 +320,7 @@ position: bottom;
     margin-top: -15px;
     margin-bottom: 30px;
 }
-    
+
 .dropdown {
     position: relative;
     width: 170px;

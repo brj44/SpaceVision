@@ -9,7 +9,7 @@ import {
     ZAxis,
     CartesianGrid,
     Tooltip,
-    Legend,
+    Legend, ResponsiveContainer,
 } from 'recharts';
 import sentryAPICall from "../../APIs/sentryAPICall";
 import MenuItem from "@mui/material/MenuItem";
@@ -115,7 +115,7 @@ function Graphpage(){
                     >
                         <div>
                             <select value={selected} onChange={handleChange}>
-                                <option value="">--Choose and option--</option>
+                                <option value="">--Choose an option--</option>
                                 <option value="Merc">Mercury</option>
                                 <option value="Venus">Venus</option>
                                 <option value="Earth">Earth</option>
@@ -163,26 +163,34 @@ function Graphpage(){
             </Select>
 
             {
-                cadData && cadData.data && (Number(cadData.count) === graphData.length || (graphData.length === 50 && dataSelection === "Sentry"))  ? <ScatterChart
-                    width={600}
-                    height={400}
-                    margin={{
-                        top: 20,
-                        right: 45,
-                        bottom: 20,
-                        left: 45,
-                    }}
-                >
-                    <CartesianGrid/>
-                    <XAxis type="number" dataKey="V" name={xName} unit={xUnit}/>
-                    <YAxis type="number" dataKey="D" name={yName} unit={yUnit}/>
-                    <ZAxis type="string" dataKey="N" name={zName} unit=""/>
-                    <Tooltip cursor={{strokeDasharray: '3 3'}}/>
-                    <Legend/>
-                    <Scatter name={dataSelection} data={graphData} fill="#8884d8" shape="circle"/>
-                </ScatterChart> : cadData && (Number(cadData.count)) === 0 ? <h1> No Data </h1>:<><h1>Loading Data</h1></>
+                cadData && cadData.data && (Number(cadData.count) === graphData.length || (graphData.length === 50 && dataSelection === "Sentry"))  ?
+                    <ResponsiveContainer
+                        width={"95%"}
+                        height= {400}
+                    >
+                        <ScatterChart
+                            width={600}
+                            height={400}
+                            maxWidth= "100%"
+                            margin={{
+                                top: 20,
+                                right: 45,
+                                bottom: 20,
+                                left: 45,
+                            }}
+                        >
+                            <CartesianGrid/>
+                            <XAxis type="number" dataKey="V" name={xName} unit={xUnit}/>
+                            <YAxis type="number" dataKey="D" name={yName} unit={yUnit}/>
+                            <ZAxis type="string" dataKey="N" name={zName} unit=""/>
+                            <Tooltip cursor={{strokeDasharray: '3 3'}}/>
+                            <Legend/>
+                            <Scatter name={dataSelection} data={graphData} fill="#8884d8" shape="circle"/>
+                        </ScatterChart>
+                    </ResponsiveContainer>:
+                    cadData && (Number(cadData.count)) === 0 ? <h1> No Data </h1>:<><h1>Loading Data</h1></>
             }
-
+        <p>   </p>
         </>
     )
 

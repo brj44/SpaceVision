@@ -132,6 +132,7 @@ function FireballPage(){
                 m = "auto"
                 direction={"row"}
                 justifyContent={"center"}
+                maxWidth={'100%'}
                 sx={{
                     gridTemplateColumns: { sm: '1fr 1fr 1fr' },
                     gap: 2,
@@ -142,6 +143,7 @@ function FireballPage(){
                     label="Min Date"
                     id="min-date"
                     className={"input"}
+
                     // eslint-disable-next-line
                     error={!minDate.match(/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/) && minDate !== ""}
                     // eslint-disable-next-line
@@ -279,7 +281,7 @@ function FireballPage(){
 
                         </LineChart>: <><h1>No Data</h1></>
             }
-
+            <p>    </p>
         </>
     )
 
