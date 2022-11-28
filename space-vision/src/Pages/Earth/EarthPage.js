@@ -43,7 +43,7 @@ function EarthPage(){
                 <h1>Earth Information</h1>
                 <img src= {photoUrl}
                      alt="test earth img"
-                     width="750"
+                     width="90%"
                 />
                 <p> {photo[0].caption} </p>
                 <h2>The centroid coordinates of this image:</h2>
@@ -56,7 +56,7 @@ function EarthPage(){
         <img
                         src = {satellite.url}
                         alt= "satellite"
-                        width = "750"
+                        width = "90%"
                     />
         </>
 

@@ -30,7 +30,11 @@ const Header = ({setPage}) =>
 
 
     const handleCloseNavMenu = (page) => {
-        setPage(page);
+        pages.map((pageList) => {
+            if (pageList === page) {
+                setPage(page);
+            }
+        })
         setAnchorElNav(null);
     }
     const handleOpenNavMenu = (event) => {

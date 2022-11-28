@@ -2,6 +2,7 @@ import NasaPhoto from "../../APIs/NasaPhoto";
 import {useEffect, useState} from "react";
 import {InputAdornment, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 
 function Apod(){
 
@@ -13,7 +14,7 @@ function Apod(){
             setPhoto(await NasaPhoto(date));
         }
         }
-    
+
 
     const [date, setDate] = useState("");
 
@@ -48,7 +49,7 @@ function Apod(){
                     <img
                         src = {photo.url}
                         alt= "NASA APOD"
-                        width = "750"
+                        width = "80%"
                     />
                 }
 
@@ -56,6 +57,12 @@ function Apod(){
 
                 <h2> Want to see a different day? enter it below </h2>
                 <p> Must be a date in the past </p>
+                <Box
+                    display= "flex"
+                    sx={{
+                        gap: 2,
+                    }}
+                >
                 <TextField
                     label="date"
                     id="date"
@@ -81,9 +88,10 @@ function Apod(){
                         }}
                          disabled={(!date.match(/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/) //eslint-disable-line
                             && date !== "")}
-                    >
+                 >
                         Load Photo
-                    </Button>
+                 </Button>
+                    </Box>
             </>
     )
 
