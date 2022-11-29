@@ -250,3 +250,28 @@ https://bitbucket.org/cs3398f22romulans/space-vision/commits/14a874761aa72a70b41
 - Fix format of mars photo's information
 
 - Utilize APIs to display data from another one of NASA's databases
+
+## Sprint 2
+
+## Contributions
+
+### Tara:
+[SV-86](https://cs3398f22romulans.atlassian.net/browse/SV-86) - Added ability to see previous dates on APOD Page rather than only showing today's image. It now takes a date parameter
+https://bitbucket.org/cs3398f22romulans/space-vision/branch/feature/SV-86-add-ability-to-see-previous-dates-
+
+[SV-82](https://cs3398f22romulans.atlassian.net/browse/SV-82) - Created a call to the EARTH API. The EARTH API will be used to display sattelite images later.
+https://bitbucket.org/cs3398f22romulans/space-vision/branch/feature/SV-82-create-call-to-the-earth-api
+
+[SV-83](https://cs3398f22romulans.atlassian.net/browse/SV-83) - Displayed a sattelite image on the page. Successfuly used the EARTH API to display one sattelite image of Houston, TX
+https://bitbucket.org/cs3398f22romulans/space-vision/branch/feature/SV-83-display-a-satellite-image-on-the-p
+
+## Next Steps (What could we work on)
+
+### Tara:
+- Could actually implement sattelite images to take longitude and lattitude parameters
+
+- Could make presets for cities to view in sattelite images
+
+- Could improve CSS styling on APOD page, graph page
+
+
