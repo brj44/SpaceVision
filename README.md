@@ -251,7 +251,7 @@ https://bitbucket.org/cs3398f22romulans/space-vision/commits/14a874761aa72a70b41
 
 - Utilize APIs to display data from another one of NASA's databases
 
-## Sprint 2
+## Sprint 3
 
 ## Contributions
 
@@ -264,6 +264,12 @@ https://bitbucket.org/cs3398f22romulans/space-vision/branch/feature/SV-82-create
 
 [SV-83](https://cs3398f22romulans.atlassian.net/browse/SV-83) - Displayed a sattelite image on the page. Successfuly used the EARTH API to display one sattelite image of Houston, TX
 https://bitbucket.org/cs3398f22romulans/space-vision/branch/feature/SV-83-display-a-satellite-image-on-the-p
+### Rayyan 
+[SV-89](https://cs3398f22romulans.atlassian.net/browse/SV-89) - fixed aspect ratios for imgs on search page 
+
+[SV-88](https://cs3398f22romulans.atlassian.net/browse/SV-88) - fixed html text displaying as normal string in search results
+
+[SV-52](https://cs3398f22romulans.atlassian.net/browse/SV-52) - added about us page
 
 ## Next Steps (What could we work on)
 
@@ -274,4 +280,10 @@ https://bitbucket.org/cs3398f22romulans/space-vision/branch/feature/SV-83-displa
 
 - Could improve CSS styling on APOD page, graph page
 
+### Rayyan 
 
+-  Fix search btn disappearing after text is entered 
+
+-  Add footer
+
+- Utilize more api data to allow user to filter their search results
