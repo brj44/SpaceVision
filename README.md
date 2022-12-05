@@ -250,3 +250,85 @@ https://bitbucket.org/cs3398f22romulans/space-vision/commits/14a874761aa72a70b41
 - Fix format of mars photo's information
 
 - Utilize APIs to display data from another one of NASA's databases
+
+## Sprint 3
+
+## Contributions
+
+### Matvey
+
+[SV-77]Create a natural events page with api calls (EONET)
+https://cs3398f22romulans.atlassian.net/browse/SV-77?atlOrigin=eyJpIjoiYWE1NDk1NzQxNmUzNDhmNDljMzA3Y2Y5OTUyNDEyNTQiLCJwIjoiaiJ9
+
+https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/e5bad6669054fa217067c4dac36a41c9e8bf474f
+
+[SV-104]Re-fix aspect ratio to un-stretch search image results
+https://cs3398f22romulans.atlassian.net/browse/SV-104?atlOrigin=eyJpIjoiM2UwYzdkZDdhZDM2NDcxZTg2OGI2ZDU5Y2JiYjkzZWEiLCJwIjoiaiJ9
+
+https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/122cf860aa09450294b7b4cfd37408de957933f3
+
+[SV-79]Create a filter for event types
+https://cs3398f22romulans.atlassian.net/browse/SV-79?atlOrigin=eyJpIjoiZWM2MWNiZWUxYmEwNGNkZTkzNzlhOWQ2MzJiOWJiZGUiLCJwIjoiaiJ9
+
+https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/4eb4bb249bcd370f56d1de327969b4607c780b8a
+
+https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/0155919036b375f67a8f65b27d1c41e7f0a7b3b7
+
+[SV-78]Format the natural events page design
+https://cs3398f22romulans.atlassian.net/browse/SV-78?atlOrigin=eyJpIjoiOWI3N2U5Y2JkYjc2NDM3ZTgyNzZhMWU5MzRkM2JjN2UiLCJwIjoiaiJ9
+
+https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/c71d6347c46d0766c79dbebd094fd176e43fb7c6
+
+[SV-98]Reformat mars rover page and fix bug where mars photos appear to small
+https://cs3398f22romulans.atlassian.net/browse/SV-98?atlOrigin=eyJpIjoiNGE2OWE2NTNmMTQ2NDNkZGFhZWU5MTM0MDE4ZmNmNTIiLCJwIjoiaiJ9
+
+https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/c3294b6cefb85bd916a4a748f9c0412b7df166d8
+
+[SV-76]Create a mars weather page (mars curisoisty rover)
+https://cs3398f22romulans.atlassian.net/browse/SV-76?atlOrigin=eyJpIjoiNTAyNmQ4OTFlMzE3NDM1NGFiYTYxY2I0NDJjNjM0YWYiLCJwIjoiaiJ9
+
+https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/40988a870024f2f5d8bc005f19771f2d81f7e3d3
+
+https://bitbucket.org/cs3398f22romulans/%7B6c784673-6e1a-4c5d-b3bc-b28fbb2c0bd9%7D/commits/d188eb7ee7120d5219cf6c886be09b7f5445baed
+
+
+
+
+
+### Tara:
+[SV-86](https://cs3398f22romulans.atlassian.net/browse/SV-86) - Added ability to see previous dates on APOD Page rather than only showing today's image. It now takes a date parameter
+https://bitbucket.org/cs3398f22romulans/space-vision/branch/feature/SV-86-add-ability-to-see-previous-dates-
+
+[SV-82](https://cs3398f22romulans.atlassian.net/browse/SV-82) - Created a call to the EARTH API. The EARTH API will be used to display sattelite images later.
+https://bitbucket.org/cs3398f22romulans/space-vision/branch/feature/SV-82-create-call-to-the-earth-api
+
+[SV-83](https://cs3398f22romulans.atlassian.net/browse/SV-83) - Displayed a sattelite image on the page. Successfuly used the EARTH API to display one sattelite image of Houston, TX
+https://bitbucket.org/cs3398f22romulans/space-vision/branch/feature/SV-83-display-a-satellite-image-on-the-p
+### Rayyan 
+[SV-89](https://cs3398f22romulans.atlassian.net/browse/SV-89) - fixed aspect ratios for imgs on search page 
+
+[SV-88](https://cs3398f22romulans.atlassian.net/browse/SV-88) - fixed html text displaying as normal string in search results
+
+[SV-52](https://cs3398f22romulans.atlassian.net/browse/SV-52) - added about us page
+
+## Next Steps (What could we work on)
+
+### Tara:
+- Could actually implement sattelite images to take longitude and lattitude parameters
+
+- Could make presets for cities to view in sattelite images
+
+- Could improve CSS styling on APOD page, graph page
+
+### Rayyan 
+
+-  Fix search btn disappearing after text is entered 
+
+-  Add footer
+
+- Utilize more api data to allow user to filter their search results
+
+### Matvey
+- Search bar needs to be in header instead of on each page
+- More pages that display another API from NASA database
+- Fix bug where natural events page is cut off on both edges(left & right)
