@@ -52,7 +52,6 @@ const SearchBar = ({setPage,setQuery}) =>{
                     maxHeight: "60%",
                     justifyContent: "center",
                 }}
-                disabled={(input !== "")}
             >
                 Search
             </Button>
